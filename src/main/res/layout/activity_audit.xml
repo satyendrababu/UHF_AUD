@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/layoutGenerateMissing"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="2dp" >
+
+        <RadioGroup
+            android:id="@+id/RgInventory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <RadioButton
+                android:id="@+id/RbAuditable"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="Audited"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/rb_bg"
+                android:textColor="@drawable/check_text_color" />
+
+            <RadioButton
+                android:id="@+id/RbMissing"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="Missing "
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/rb_bg"
+                android:textColor="@drawable/check_text_color" />
+
+            <RadioButton
+                android:id="@+id/RbMislocated"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="Mislocated"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/rb_bg"
+                android:textColor="@drawable/check_text_color"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gray1" />
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:weightSum="6"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp" >
+        <TextView
+            android:id="@+id/auditEqptNo"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:text="Asset ID"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="(0)"
+            android:textColor="@color/red1"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="Description"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Location"
+            android:textSize="15sp" />
+
+
+
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvTagLen"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="@string/tvTagCount"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#a40404" />
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <ListView
+        android:id="@+id/LvTags"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/grayslate" />
+    <LinearLayout
+        android:id="@+id/layoutInventory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:weightSum="2"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btPhyUpdate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:text="Verify"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/BtClear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            android:background="@drawable/button_bg"
+            android:text="@string/btClear"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

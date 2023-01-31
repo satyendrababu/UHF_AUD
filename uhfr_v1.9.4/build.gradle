@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('uhfr_v1.9.4.jar'))

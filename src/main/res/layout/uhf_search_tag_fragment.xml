@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/RgInventory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/RbInventorySingle"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="By RFID"
+            android:textColor="@drawable/check_text_color2"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/RbInventoryLoop"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="By Acc. No."
+            android:textColor="@drawable/check_text_color2"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray1" />
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/llQValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="6dp"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvQ"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/SpinnerQ"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:entries="@array/arrayAntiQ" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContinuous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:weightSum="10">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8.5">
+
+                <EditText
+                    android:id="@+id/et_between"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Enter Acc. No."
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/red1"
+                    android:background="@drawable/rectangle_bg"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5">
+                <ImageView
+                    android:id="@+id/imgSuccess"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/success2"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray1" />
+    <LinearLayout
+        android:id="@+id/layout12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/BtInventory"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/btInventory"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btSearch"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_bg"
+            android:text="Search"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/BtClear"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/btClear"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:id="@+id/layout0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCountOfTags"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/BtClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btClear"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/button_bg"
+            android:layout_marginRight="5dp" />
+    </LinearLayout>
+    -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gray1" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:text="Acc. No"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="Tag Count: "
+            android:visibility="gone"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="0"
+            android:textColor="@color/red1"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvTagLen"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Title"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#a40404" />
+
+    <ListView
+        android:id="@+id/LvTags"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

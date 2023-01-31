@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:id="@+id/llContinuous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/et_read_epc"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="7"
+            android:background="@drawable/rectangle_bg2"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="EPC Code "
+            android:singleLine="true"
+            android:textColor="@color/red1"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btSearchTag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:background="@drawable/button_bg3"
+            android:text="Search"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="5dp"
+                android:text="Location:"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/spTaggingLocation"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="8"
+                android:background="@drawable/rectangle_bg2"
+                android:clickable="false"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:hint="Select Location"
+                android:textColor="@color/rcb4" />
+
+            <CheckBox
+                android:id="@+id/ckbSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Save "
+                android:textColor="@color/rcb1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Item Id:   "
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/spTaggingItemId"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_bg2"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:hint="Select Asset ID"
+                android:textColor="@color/rcb4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Desc:      "
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:background="@drawable/rectangle_bg2"
+                android:hint="Description"
+                android:editable="false"
+                android:textColor="@color/rcb3"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/imgPainting"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/empty"
+                android:background="@drawable/rectangle_bg2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Serial no:"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/spTaggingSerialNo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_bg2"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:hint="Select serial no" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg"
+            android:text="Save"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg"
+            android:text="Clear"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
+

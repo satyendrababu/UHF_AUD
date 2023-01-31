@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\RFID_NEPAL\demo-uhf_as\src\main\assets"/><source path="D:\RFID_NEPAL\demo-uhf_as\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\RFID_NEPAL\demo-uhf_as\src\debug\assets"/></dataSet></merger>
