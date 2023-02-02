@@ -61,10 +61,10 @@ public class UHFMainActivity extends BaseTabFragmentActivity {
 		actionBar.setIcon(android.R.color.transparent);
 
 	    	initSound();
-	      //  initHF();
+	        initHF();
 	        initViewPageData();
 	        initViewPager();
-	     //   initTabs();
+	        initTabs();
 
 
 
@@ -145,7 +145,7 @@ public class UHFMainActivity extends BaseTabFragmentActivity {
 		SCAN_BUTTON_VALUE = BUTTON_VALUE;
 	}
 
-	public class InitTask extends AsyncTask<String, Integer, Boolean> {
+	/*public class InitTask extends AsyncTask<String, Integer, Boolean> {
 		ProgressDialog mypDialog;
 
 		@Override
@@ -178,7 +178,7 @@ public class UHFMainActivity extends BaseTabFragmentActivity {
 			mypDialog.show();
 		}
 
-	}
+	}*/
 
 	public boolean vailHexInput(String str) {
 

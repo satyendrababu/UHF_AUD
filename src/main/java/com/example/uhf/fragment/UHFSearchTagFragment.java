@@ -1,6 +1,11 @@
 package com.example.uhf.fragment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +14,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +44,7 @@ import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
 import com.rscja.deviceapi.entity.ISO15693Entity;
+import com.uhf.api.cls.Reader;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -46,8 +53,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
+import java.util.List;
+
+import cn.pda.serialport.Tools;
 
 import static android.content.ContentValues.TAG;
+import static android.content.Context.AUDIO_SERVICE;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
@@ -726,12 +737,14 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
         private int mBetween = 80;
         private String uniqueItemId = "";
         HashMap<String, String> map;
+        private String selectedLocation;
+        Message msg = null;
 
         public TagScanThread(int iBetween, String uniqueItemId) {
             mBetween = iBetween;
             this.uniqueItemId = uniqueItemId;
         }
-
+        List<Reader.TAGINFO> list1;
         public void run() {
             String strTid;
             String strResult;
@@ -740,36 +753,73 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
             ISO15693Entity entity = null;
 
             while (loopFlag) {
+                if(UHFMainActivity.mUhfrManager != null) {
+                    list1 = UHFMainActivity.mUhfrManager.tagInventoryByTimer((short) 50);
+                    Log.e("UNL New List", list1 + "");
+                    String data = null;
+                    //  handler1.sendEmptyMessage(1980);
+                    if (list1 != null && list1.size() > 0) {
+                        Log.e(TAG, list1.size() + "");
 
-                entity = mContext.mRFID.inventory();//.readTagFormBuffer();
+                        playSound(1);
+                   /* if(isPlay) {
+                        Util.play(1, 0);
+                    }*/
 
-                if (entity != null) {
-                    Message msg = handler.obtainMessage();
-                    /*strTid = res[0];
-                    if (!strTid.equals("0000000000000000")&&!strTid.equals("000000000000000000000000")) {
-                        strResult = "TID:" + strTid + "\n";
+                        for (Reader.TAGINFO tfs : list1) {
+                            byte[] epcdata = tfs.EpcId;
+
+                            data = Tools.Bytes2HexString(epcdata, epcdata.length);
+
+                            int rssi = tfs.RSSI;
+                            //    Message msg = new Message();
+                            //  msg.what = 1;
+                            //  Bundle b = new Bundle();
+                            // b.putString("data", data);
+                            Log.e("UNL DATA", "***" + data);
+                            // b.putString("rssi", rssi + "");
+                            //   msg.setData(b);
+                            //  handler1.sendMessage(msg);
+
+                        }
+
+                    }
+
+                    msg = new Message();
+                    //  msg.obj = data +"@"+"Success";
+                    // searchHandler.sendMessage(msg);
+                    Log.e("MY UNL", "***" + data);
+                    //  Log.e("DATABASE","***"+tagIdHashMap);
+                    if (tagIdHashMap.containsKey(data)) {
+                        if (data != null) {
+
+                            Log.e("Tag Id", "***" + tagIdHashMap.get(data).getLocation_id());
+
+                            String myLocation = tagIdHashMap.get(data).getLocation_id().trim();
+                            tagging = tagIdHashMap.get(data);
+                            if (myLocation.equals(selectedLocation.trim())) {
+                                Log.e("Inside EPC", "***");
+                                msg.obj = tagging.getItem_id() + "@" +tagging.getTitle()+ "@" +tagging.getLocation_name()+ "@"
+                                        + "success";
+                                searchHandler.sendMessage(msg);
+
+                            } else {
+                                Log.e("Inside Else", "***" + tagging.getItem_id());
+                                msg.obj = tagging.getItem_id() + "@" +tagging.getTitle()+ "@" +tagging.getLocation_name()+ "@"
+                                        + "failure";
+                                searchHandler.sendMessage(msg);
+                            }
+                        }
                     } else {
-                        strResult = "";
-                    }
-                    Message msg = handler.obtainMessage();
-					msg.obj = strResult + "EPC:"
-							+ mContext.mReader.convertUiiToEPC(res[1]) + "@"
-							+ res[2];*/
-                    if(uniqueItemId.equalsIgnoreCase(entity.getId())){
-                        tt = tagIdHashMap.get(entity.getId());
-                        msg.obj = tt.getItem_id().trim() + "@"
-                                + tt.getTitle().trim();
-                        searchHandler.sendMessage(msg);
-                        //btSearch.setText("Search");
-                        loopFlag = false;
+                        Log.e("Inside Else","***"+data);
                     }
 
-                }
-                try {
-                    sleep(mBetween);
-                } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
+                    try {
+                        sleep(mBetween);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
                 }
 
             }
@@ -807,8 +857,94 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
             }
         }
     }
+    HashMap<Integer, Integer> soundMap = new HashMap<Integer, Integer>();
+    private SoundPool soundPool;
+    private float volumnRatio;
+    private AudioManager am;
+    private void initSound(){
+        soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 5);
+        soundMap.put(1, soundPool.load(getContext(), R.raw.scan, 1));
+        soundMap.put(2, soundPool.load(getContext(), R.raw.serror, 1));
+        am = (AudioManager) getContext().getSystemService(AUDIO_SERVICE);
+    }
+    public void playSound(int id) {
+
+        float audioMaxVolumn = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+        float audioCurrentVolumn = am.getStreamVolume(AudioManager.STREAM_MUSIC);
+        volumnRatio = audioCurrentVolumn / audioMaxVolumn;
+        try {
+            soundPool.play(soundMap.get(id), volumnRatio,
+                    volumnRatio,
+                    1,
+                    0,
+                    1
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+    }
 
 
+    //key receiver
+    private long startTime = 0;
+    private boolean keyUpFalg = true;
+    private BroadcastReceiver keyReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
 
+            int keyCode = intent.getIntExtra("keyCode", 0);
+            if (keyCode == 0) {//H941
+                keyCode = intent.getIntExtra("keycode", 0);
+            }
+//            Log.e("key ","keyCode = " + keyCode) ;
+            boolean keyDown = intent.getBooleanExtra("keydown", false);
+//			Log.e("key ", "down = " + keyDown);
+            if (keyUpFalg && keyDown && System.currentTimeMillis() - startTime > 500) {
+                keyUpFalg = false;
+                startTime = System.currentTimeMillis();
+                if ((//keyCode == KeyEvent.KEYCODE_F1 || keyCode == KeyEvent.KEYCODE_F2
+                        keyCode == KeyEvent.KEYCODE_F3 ||
+//                                 keyCode == KeyEvent.KEYCODE_F4 ||
+                                keyCode == KeyEvent.KEYCODE_F4  || keyCode == KeyEvent.KEYCODE_F7)) {
+//                Log.e("key ","inventory.... " ) ;
+                    if(btSearch.getText().toString().equalsIgnoreCase("Search")){
+                        String searchKey = et_between.getText().toString().trim();
+                        if(btSearch.isEnabled()) {
+                            if (tagIdHashMap.containsKey(searchKey) || accNoHashMap.containsKey(searchKey)) {
+
+                                //Toast.makeText(mContext, "Found", Toast.LENGTH_LONG).show();
+                                scanAndReadTag();
+                                RbInventorySingle.setEnabled(false);
+                                RbInventoryLoop.setEnabled(false);
+
+                            }
+                        }
+                        else {
+                            Toast.makeText(mContext, "Enter Valid Asset Id...", Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                    else if(btSearch.getText().toString().equalsIgnoreCase("Searching")){
+                        //et_between.getText().clear();
+                        //btSearch.setText("Search");
+                        if(btSearch.isEnabled()) {
+                            scanAndReadTag();
+                            btSearch.setText("Search");
+                            RbInventorySingle.setEnabled(false);
+                            RbInventoryLoop.setEnabled(false);
+                            Toast.makeText(mContext, "Stopping...", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+                return;
+            } else if (keyDown) {
+                startTime = System.currentTimeMillis();
+            } else {
+                keyUpFalg = true;
+            }
+
+        }
+    };
 
 }

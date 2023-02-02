@@ -1,11 +1,17 @@
 package com.example.uhf.fragment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,15 +32,23 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.uhf.R;
 import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
 import com.rscja.deviceapi.entity.ISO15693Entity;
+import com.uhf.api.cls.Reader;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
+import cn.pda.serialport.Tools;
+
+import static android.content.ContentValues.TAG;
+import static android.content.Context.AUDIO_SERVICE;
 
 
 public class UHFReadEPCFragment extends KeyDwonFragment {
@@ -520,7 +534,7 @@ public class UHFReadEPCFragment extends KeyDwonFragment {
 		public TagThread(int iBetween) {
 			mBetween = iBetween;
 		}
-
+		List<Reader.TAGINFO> list1;
 		public void run() {
 			String strTid;
 			String strResult;
@@ -530,27 +544,45 @@ public class UHFReadEPCFragment extends KeyDwonFragment {
 
 			while (loopFlag) {
 
-				entity = mContext.mRFID.inventory();//.readTagFormBuffer();
+				if(UHFMainActivity.mUhfrManager != null) {
 
-				if (entity != null) {
+					list1 = UHFMainActivity.mUhfrManager.tagInventoryByTimer((short) 50);
+					Log.e("UNL New List", list1 + "");
+					String data = null;
+					//  handler1.sendEmptyMessage(1980);
+					if (list1 != null && list1.size() > 0) {
+						Log.e(TAG, list1.size() + "");
 
-					strTid = entity.getId();
-					/*if (!strTid.equals("0000000000000000")&&!strTid.equals("000000000000000000000000")) {
-						strResult = strTid;
-					} else {
-						strResult = "";
-					}*/
-					Log.e("kya",""+strTid);
+						playSound(1);
+                   /* if(isPlay) {
+                        Util.play(1, 0);
+                    }*/
+
+						for (Reader.TAGINFO tfs : list1) {
+							byte[] epcdata = tfs.EpcId;
+
+							data = Tools.Bytes2HexString(epcdata, epcdata.length);
+
+							int rssi = tfs.RSSI;
+							//    Message msg = new Message();
+							//  msg.what = 1;
+							//  Bundle b = new Bundle();
+							// b.putString("data", data);
+							Log.e("UNL DATA", "***" + data);
+							// b.putString("rssi", rssi + "");
+							//   msg.setData(b);
+							//  handler1.sendMessage(msg);
+
+						}
+
+					}
+					Log.e("kya", "" + data);
 					Message msg = handler.obtainMessage();
-					msg.obj = strTid;
+					msg.obj = data;
 					handler.sendMessage(msg);
+
 				}
-				try {
-					sleep(mBetween);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+
 
 			}
 		}
@@ -560,5 +592,68 @@ public class UHFReadEPCFragment extends KeyDwonFragment {
 	public void myOnKeyDwon() {
 		readTag();
 	}
+
+	HashMap<Integer, Integer> soundMap = new HashMap<Integer, Integer>();
+	private SoundPool soundPool;
+	private float volumnRatio;
+	private AudioManager am;
+	private void initSound(){
+		soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 5);
+		soundMap.put(1, soundPool.load(getContext(), R.raw.scan, 1));
+		soundMap.put(2, soundPool.load(getContext(), R.raw.serror, 1));
+		am = (AudioManager) getContext().getSystemService(AUDIO_SERVICE);
+	}
+	public void playSound(int id) {
+
+		float audioMaxVolumn = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+		float audioCurrentVolumn = am.getStreamVolume(AudioManager.STREAM_MUSIC);
+		volumnRatio = audioCurrentVolumn / audioMaxVolumn;
+		try {
+			soundPool.play(soundMap.get(id), volumnRatio,
+					volumnRatio,
+					1,
+					0,
+					1
+			);
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+	}
+
+
+	//key receiver
+	private long startTime = 0;
+	private boolean keyUpFalg = true;
+	private BroadcastReceiver keyReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+
+			int keyCode = intent.getIntExtra("keyCode", 0);
+			if (keyCode == 0) {//H941
+				keyCode = intent.getIntExtra("keycode", 0);
+			}
+//            Log.e("key ","keyCode = " + keyCode) ;
+			boolean keyDown = intent.getBooleanExtra("keydown", false);
+//			Log.e("key ", "down = " + keyDown);
+			if (keyUpFalg && keyDown && System.currentTimeMillis() - startTime > 500) {
+				keyUpFalg = false;
+				startTime = System.currentTimeMillis();
+				if ((//keyCode == KeyEvent.KEYCODE_F1 || keyCode == KeyEvent.KEYCODE_F2
+						keyCode == KeyEvent.KEYCODE_F3 ||
+//                                 keyCode == KeyEvent.KEYCODE_F4 ||
+								keyCode == KeyEvent.KEYCODE_F4  || keyCode == KeyEvent.KEYCODE_F7)) {
+//                Log.e("key ","inventory.... " ) ;
+					readTag();
+				}
+				return;
+			} else if (keyDown) {
+				startTime = System.currentTimeMillis();
+			} else {
+				keyUpFalg = true;
+			}
+
+		}
+	};
 
 }

@@ -53,7 +53,7 @@ public class BaseTabFragmentActivity extends FragmentActivity {
 	protected List<String> lstTitles = new ArrayList<String>();
 
 	// public Reader mReader;
-	public RFIDWithISO15693 mRFID;
+	//public RFIDWithISO15693 mRFID;
 	private int index = 0;
 
 	private ActionBar.Tab tab_kill, tab_lock, tab_set ;
@@ -74,7 +74,7 @@ public class BaseTabFragmentActivity extends FragmentActivity {
 		mActionBar.setDisplayHomeAsUpEnabled(true);
 		mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		try {
-			mRFID = RFIDWithISO15693.getInstance();
+			//mRFID = RFIDWithISO15693.getInstance();
 		} catch (Exception ex) {
 
 			toastMessage(ex.getMessage());
@@ -275,9 +275,9 @@ public class BaseTabFragmentActivity extends FragmentActivity {
 	@Override
 	protected void onDestroy() {
 
-		if (mRFID != null) {
+		/*if (mRFID != null) {
 			mRFID.free();
-		}
+		}*/
 		super.onDestroy();
 	}
 
@@ -301,16 +301,6 @@ public class BaseTabFragmentActivity extends FragmentActivity {
 		return false;
 	}
 
-	public void getUHFVersion() {
 
-
-		if(mRFID!=null) {
-
-			/*String rfidVer = mRFID.getHardwareType();
-
-			UIHelper.alert(this, R.string.action_uhf_ver,
-					rfidVer, R.drawable.webtext);*/
-		}
-	}
 
 }
