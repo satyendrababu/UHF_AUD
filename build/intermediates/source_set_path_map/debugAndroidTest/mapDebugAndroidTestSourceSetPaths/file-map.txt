@@ -1,0 +1,4 @@
+com.example.uhf.test-androidTest-0 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\generated\res\resValues\androidTest\debug
+com.example.uhf.test-mergeDebugAndroidTestResources-1 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.uhf.test-mergeDebugAndroidTestResources-2 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.uhf.test-debugAndroidTest-3 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

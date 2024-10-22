@@ -13,7 +13,6 @@ import android.graphics.drawable.ColorDrawable;
 //import android.support.v7.app.ActionBarActivity;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -69,14 +68,13 @@ public class ReportActivity extends Activity {
     private int loc_index = 0;
 
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         setContentView(R.layout.activity_report);
         ActionBar actionBar = (ActionBar) getActionBar();
-        actionBar.setBackgroundDrawable(this.getDrawable(R.drawable.banner));
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.banner));
         actionBar.setTitle("");
         actionBar.setIcon(android.R.color.transparent);
         serverUrls = new ServerUrls();
@@ -106,8 +104,8 @@ public class ReportActivity extends Activity {
         LvTags.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Tagging eqptNo = auditListAdapter.getItem(position);
-                getAuditableItemData(eqptNo.getItem_id());
+                /*Tagging eqptNo = auditListAdapter.getItem(position);
+                getAuditableItemData(eqptNo.getItem_id());*/
             }
         });
     }

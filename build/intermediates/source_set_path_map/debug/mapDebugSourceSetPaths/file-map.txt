@@ -1,0 +1,14 @@
+com.example.uhf-coordinatorlayout-1.0.0-0 C:\Users\Dell\.gradle\caches\8.9\transforms\1b0e4ab4c0aca14bb6c8340f58aee45d\transformed\coordinatorlayout-1.0.0\res
+com.example.uhf-appcompat-1.0.0-1 C:\Users\Dell\.gradle\caches\8.9\transforms\27dbea23d6765da2558c3be399ecb322\transformed\appcompat-1.0.0\res
+com.example.uhf-jetified-library-1.1.5-2 C:\Users\Dell\.gradle\caches\8.9\transforms\557b8d74f2214c22ad7afc08ecf59e39\transformed\jetified-library-1.1.5\res
+com.example.uhf-media-1.0.0-3 C:\Users\Dell\.gradle\caches\8.9\transforms\5b6da93c2aeb50bebd38ec065b266dee\transformed\media-1.0.0\res
+com.example.uhf-jetified-DeviceAPI_ver20231208_release-4 C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\res
+com.example.uhf-jetified-SearchableSpinner-2.0-5 C:\Users\Dell\.gradle\caches\8.9\transforms\7ad351a3ed0037b598f4b6ece392644d\transformed\jetified-SearchableSpinner-2.0\res
+com.example.uhf-core-1.0.0-6 C:\Users\Dell\.gradle\caches\8.9\transforms\ba3c7012eb394a8dc0a458be64d6da39\transformed\core-1.0.0\res
+com.example.uhf-pngs-7 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\generated\res\pngs\debug
+com.example.uhf-resValues-8 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\generated\res\resValues\debug
+com.example.uhf-packageDebugResources-9 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.uhf-packageDebugResources-10 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.uhf-debug-11 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.uhf-debug-12 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\debug\res
+com.example.uhf-main-13 D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\res

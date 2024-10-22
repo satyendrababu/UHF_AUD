@@ -1,19 +1,19 @@
 package com.example.uhf.adapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+
+import com.example.uhf.fragment.KeyDwonFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.uhf.fragment.KeyDwonFragment;
-
 /**
  * Created by Administrator on 2015-03-10.
  */
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private List<KeyDwonFragment> lstFrg = new ArrayList<KeyDwonFragment>();
     private List<String> lstTitles = new ArrayList<String>();

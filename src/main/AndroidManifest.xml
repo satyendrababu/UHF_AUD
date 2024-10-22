@@ -20,6 +20,7 @@
         android:name=".tools.MyContext">
 
         <activity
+            android:exported="false"
             android:name=".activity.Login"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden"
@@ -30,11 +31,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.UHFMainActivity" />
-        <activity android:name=".activity.UHFTaggingActivity" />
-        <activity android:name=".activity.Home" />
-        <activity android:name=".activity.AuditActivity" />
-        <activity android:name=".activity.ReportActivity"/>
+        <activity android:name=".activity.UHFMainActivity" android:exported="false" />
+        <activity android:name=".activity.UHFTaggingActivity" android:exported="false"/>
+        <activity android:name=".activity.Home" android:exported="false"/>
+        <activity android:name=".activity.AuditActivity" android:exported="false"/>
+        <activity android:name=".activity.ReportActivity" android:exported="false"/>
     </application>
 
 </manifest>

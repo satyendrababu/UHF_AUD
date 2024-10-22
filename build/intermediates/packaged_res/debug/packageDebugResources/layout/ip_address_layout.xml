@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/rcb3"
+                android:text="Please Enter Server Details"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/etIpAddress"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Server IP Address"
+                android:background="@drawable/rectangle_bg"/>
+            <EditText
+                android:id="@+id/etPort"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Server Port"
+                android:inputType="numberSigned"
+                android:background="@drawable/rectangle_bg"/>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btEdit"
+            android:text="Edit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg1"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/btSave"
+            android:text="Save"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"/>
+    </LinearLayout>
+</LinearLayout>

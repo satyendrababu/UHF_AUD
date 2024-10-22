@@ -1,229 +1,242 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-40:12
-MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\SearchableSpinner-2.0.aar\670cd90e5e784758e5dd0d02c0fcda9e\AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\bf2dc58d55f6d2054a0e9e4e68ad7735\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\03cc79feaadb074cf8f48c785b3eaeaa\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\608ec29903500b376adfe8f755d0546d\AndroidManifest.xml:2:1-11:12
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\paperdb-2.1.aar\b4b9b1752c754783984c9c2de9124bb9\AndroidManifest.xml:2:1-14:12
-MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\library-1.1.5.aar\b1a20ba40c9db0f8f4252380df138e64\AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\7781db4119a52983a4e45e04ce8a511d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\2ecc2217d8d2f2449123ee25f3f50ce7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\ef91701aa48c719d309008003d46acfb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\c669be68f6eae5223d076b18fd6b1bc6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\06dd66b641cd200c1098705a42499182\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\5310865dcd40d9f5e8dd3f6c28bbf4d3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\f8c087956a086d75604544177c476782\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\2fb32373e80ae804651ea2ffa7c31683\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\564dfdd44d34b85fdf43c2d944a59607\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\faaa2d175416c0328e10490c33b94330\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\1f9c885a9df529dbe270a0e248c2ccfa\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\ae80ae06da99e3c9a143e3433ea4a669\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\07f0b76e67d1ff86f6191f9a4d5c2494\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4f01e58e5f215d372459a4184479fab7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\13c0776e9043bf3bdec6b858093b3826\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c30986206b7fd220c6b2fc048db4b376\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\2581fd6f61f40c5ddf1bf29da99615e3\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5d4e87566138a62a18ee1d5fa5520d07\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3b7c93232a62c72e11adea10900b2495\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\15ebe739147aac6c1a9736ec7f7880ce\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\920d2f61af8412f69e056bdb7631154a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d80d6085793b4b9105d15eb2607944ee\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\b8488d864841a76ee6dc6f054619a479\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\fa739c9138dd4de36cea3b2c80418384\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\167ee857943b3a78debc4bb928099f74\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\35e43493afd8276acebd7f83b8f09c04\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:2:1-41:12
+MERGED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:2:1-16:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\67304429fd6f0285872995a8432e9fd5\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\27dbea23d6765da2558c3be399ecb322\transformed\appcompat-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Dell\.gradle\caches\8.9\transforms\7338e48bc38b6e2bdb8acdb1739f5971\transformed\jetified-volley-1.2.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Dell\.gradle\caches\8.9\transforms\557b8d74f2214c22ad7afc08ecf59e39\transformed\jetified-library-1.1.5\AndroidManifest.xml:2:1-14:12
+MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Dell\.gradle\caches\8.9\transforms\7ad351a3ed0037b598f4b6ece392644d\transformed\jetified-SearchableSpinner-2.0\AndroidManifest.xml:2:1-17:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\5b6da93c2aeb50bebd38ec065b266dee\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\8fda86041d029c0bb955cb0289195498\transformed\fragment-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\682b73a09f3bc05271b4356c521bad18\transformed\vectordrawable-animated-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\81ce8c7a057344985f3841fd9d24a63a\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\be421248a35ec5fe555609acbb32d067\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\34c28fad3e772ca24615045b12ce8740\transformed\vectordrawable-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\adb007c14c2c071ab3b24cb77db6230f\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\1e28bedbfb8b68e641f7a66baf22457b\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\1b0e4ab4c0aca14bb6c8340f58aee45d\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\3fb3cbbaf8a777d26df4a45dc7e7d53b\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\09affd9b983681489b155f785e3c2d05\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\edc9ca6d3eb52ec4d614d5014eb12c1f\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\5ed0d82091302cf69b5c014f8831027b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\9f63ef89c4c3c6f1d362f57d9109f9cc\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\ba3c7012eb394a8dc0a458be64d6da39\transformed\core-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\419bb6aadfd8d0041b7a63c6a1b900e6\transformed\versionedparcelable-1.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\228169e7d9734f5896a867ef2ce0339d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\dadea2a7f2e02af1823e8468f28fe882\transformed\lifecycle-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\aab016fb87c78968e23ea3bc6a92bf09\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\0812546590ecfea69142748fa226f9fa\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\d53d435267cb5e41ab641fd0d4978474\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\e0be6fdc13b168edc3af1a3c30316430\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\65f48f698e86a93d77a095f1da6a3c8a\transformed\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\fa7f95e618a0318e9dfc747987d75c0a\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\14ef87b45c8e3f6fe80ff8ab15e7ae0d\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\b9c5921174d386edce19f867c9442a20\transformed\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 	package
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:3:5-30
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:3:5-30
+		INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:7:5-79
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:7:5-79
+MERGED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:11:5-79
+MERGED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:7:22-76
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.INTERNET
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:8:5-67
-MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\library-1.1.5.aar\b1a20ba40c9db0f8f4252380df138e64\AndroidManifest.xml:11:5-67
-MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\library-1.1.5.aar\b1a20ba40c9db0f8f4252380df138e64\AndroidManifest.xml:11:5-67
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:8:5-67
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Dell\.gradle\caches\8.9\transforms\557b8d74f2214c22ad7afc08ecf59e39\transformed\jetified-library-1.1.5\AndroidManifest.xml:11:5-67
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Dell\.gradle\caches\8.9\transforms\557b8d74f2214c22ad7afc08ecf59e39\transformed\jetified-library-1.1.5\AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:8:22-64
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:9:5-81
-MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\library-1.1.5.aar\b1a20ba40c9db0f8f4252380df138e64\AndroidManifest.xml:12:5-81
-MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\library-1.1.5.aar\b1a20ba40c9db0f8f4252380df138e64\AndroidManifest.xml:12:5-81
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:9:5-81
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Dell\.gradle\caches\8.9\transforms\557b8d74f2214c22ad7afc08ecf59e39\transformed\jetified-library-1.1.5\AndroidManifest.xml:12:5-81
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Dell\.gradle\caches\8.9\transforms\557b8d74f2214c22ad7afc08ecf59e39\transformed\jetified-library-1.1.5\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:9:22-78
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:9:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:10:5-75
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:10:5-75
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:10:22-72
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:10:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:11:5-80
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:11:5-80
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:11:22-77
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:11:22-77
 uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:12:5-81
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:12:22-79
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:12:22-79
 application
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:14:5-38:19
-MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\SearchableSpinner-2.0.aar\670cd90e5e784758e5dd0d02c0fcda9e\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\SearchableSpinner-2.0.aar\670cd90e5e784758e5dd0d02c0fcda9e\AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\608ec29903500b376adfe8f755d0546d\AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\608ec29903500b376adfe8f755d0546d\AndroidManifest.xml:9:5-20
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\paperdb-2.1.aar\b4b9b1752c754783984c9c2de9124bb9\AndroidManifest.xml:12:5-20
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\paperdb-2.1.aar\b4b9b1752c754783984c9c2de9124bb9\AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\13c0776e9043bf3bdec6b858093b3826\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\13c0776e9043bf3bdec6b858093b3826\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c30986206b7fd220c6b2fc048db4b376\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c30986206b7fd220c6b2fc048db4b376\AndroidManifest.xml:22:5-23:19
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:14:5-39:19
+INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:14:5-39:19
+MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Dell\.gradle\caches\8.9\transforms\7ad351a3ed0037b598f4b6ece392644d\transformed\jetified-SearchableSpinner-2.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Dell\.gradle\caches\8.9\transforms\7ad351a3ed0037b598f4b6ece392644d\transformed\jetified-SearchableSpinner-2.0\AndroidManifest.xml:11:5-15:19
+MERGED from [androidx.core:core:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\ba3c7012eb394a8dc0a458be64d6da39\transformed\core-1.0.0\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\ba3c7012eb394a8dc0a458be64d6da39\transformed\core-1.0.0\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\419bb6aadfd8d0041b7a63c6a1b900e6\transformed\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\419bb6aadfd8d0041b7a63c6a1b900e6\transformed\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
+	android:extractNativeLibs
+		INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\13c0776e9043bf3bdec6b858093b3826\AndroidManifest.xml:22:18-91
+		ADDED from [androidx.core:core:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\ba3c7012eb394a8dc0a458be64d6da39\transformed\core-1.0.0\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\SearchableSpinner-2.0.aar\670cd90e5e784758e5dd0d02c0fcda9e\AndroidManifest.xml:14:9-35
+		ADDED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Dell\.gradle\caches\8.9\transforms\7ad351a3ed0037b598f4b6ece392644d\transformed\jetified-SearchableSpinner-2.0\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:18:9-41
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:18:9-41
 	android:icon
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:17:9-45
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:17:9-45
 	android:allowBackup
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:16:9-35
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:19:9-43
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:19:9-43
 	android:usesCleartextTraffic
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:15:9-44
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:15:9-44
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:20:9-40
-activity#com.example.uhf.activity.UHFMainActivity
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:22:9-32:20
-	android:screenOrientation
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:26:13-49
-	android:label
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:24:13-45
-	android:windowSoftInputMode
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:25:13-54
-	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:23:13-53
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:27:13-31:29
-action#android.intent.action.MAIN
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:28:17-69
-	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:28:25-66
-category#android.intent.category.LAUNCHER
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:30:17-77
-	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:30:27-74
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:20:9-40
 activity#com.example.uhf.activity.Login
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:33:9-52
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:22:9-33:20
+	android:screenOrientation
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:27:13-49
+	android:label
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:25:13-45
+	android:windowSoftInputMode
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:26:13-54
+	android:exported
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:33:19-49
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:24:13-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:31:27-74
+activity#com.example.uhf.activity.UHFMainActivity
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:34:9-87
+	android:exported
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:34:60-84
+	android:name
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:34:19-59
 activity#com.example.uhf.activity.UHFTaggingActivity
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:34:9-65
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:35:9-89
+	android:exported
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:35:63-87
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:34:19-62
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:35:19-62
 activity#com.example.uhf.activity.Home
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:35:9-51
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:36:9-75
+	android:exported
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:36:49-73
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:35:19-48
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:36:19-48
 activity#com.example.uhf.activity.AuditActivity
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:36:9-60
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:37:9-84
+	android:exported
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:37:58-82
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:36:19-57
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:37:19-57
 activity#com.example.uhf.activity.ReportActivity
-ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:37:9-60
+ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:38:9-85
+	android:exported
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:38:59-83
 	android:name
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml:37:19-58
+		ADDED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml:38:19-58
 uses-sdk
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\SearchableSpinner-2.0.aar\670cd90e5e784758e5dd0d02c0fcda9e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\SearchableSpinner-2.0.aar\670cd90e5e784758e5dd0d02c0fcda9e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\bf2dc58d55f6d2054a0e9e4e68ad7735\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\bf2dc58d55f6d2054a0e9e4e68ad7735\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\03cc79feaadb074cf8f48c785b3eaeaa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\03cc79feaadb074cf8f48c785b3eaeaa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\608ec29903500b376adfe8f755d0546d\AndroidManifest.xml:7:5-43
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\608ec29903500b376adfe8f755d0546d\AndroidManifest.xml:7:5-43
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\paperdb-2.1.aar\b4b9b1752c754783984c9c2de9124bb9\AndroidManifest.xml:8:5-10:41
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\paperdb-2.1.aar\b4b9b1752c754783984c9c2de9124bb9\AndroidManifest.xml:8:5-10:41
-MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\library-1.1.5.aar\b1a20ba40c9db0f8f4252380df138e64\AndroidManifest.xml:7:5-9:41
-MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\library-1.1.5.aar\b1a20ba40c9db0f8f4252380df138e64\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\7781db4119a52983a4e45e04ce8a511d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\7781db4119a52983a4e45e04ce8a511d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\2ecc2217d8d2f2449123ee25f3f50ce7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\2ecc2217d8d2f2449123ee25f3f50ce7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\ef91701aa48c719d309008003d46acfb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\ef91701aa48c719d309008003d46acfb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\c669be68f6eae5223d076b18fd6b1bc6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\c669be68f6eae5223d076b18fd6b1bc6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\06dd66b641cd200c1098705a42499182\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\06dd66b641cd200c1098705a42499182\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\5310865dcd40d9f5e8dd3f6c28bbf4d3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\5310865dcd40d9f5e8dd3f6c28bbf4d3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\f8c087956a086d75604544177c476782\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\f8c087956a086d75604544177c476782\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\2fb32373e80ae804651ea2ffa7c31683\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\2fb32373e80ae804651ea2ffa7c31683\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\564dfdd44d34b85fdf43c2d944a59607\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\564dfdd44d34b85fdf43c2d944a59607\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\faaa2d175416c0328e10490c33b94330\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\faaa2d175416c0328e10490c33b94330\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\1f9c885a9df529dbe270a0e248c2ccfa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\1f9c885a9df529dbe270a0e248c2ccfa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\ae80ae06da99e3c9a143e3433ea4a669\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\ae80ae06da99e3c9a143e3433ea4a669\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\07f0b76e67d1ff86f6191f9a4d5c2494\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\07f0b76e67d1ff86f6191f9a4d5c2494\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4f01e58e5f215d372459a4184479fab7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4f01e58e5f215d372459a4184479fab7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\13c0776e9043bf3bdec6b858093b3826\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\13c0776e9043bf3bdec6b858093b3826\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c30986206b7fd220c6b2fc048db4b376\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c30986206b7fd220c6b2fc048db4b376\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\2581fd6f61f40c5ddf1bf29da99615e3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\2581fd6f61f40c5ddf1bf29da99615e3\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5d4e87566138a62a18ee1d5fa5520d07\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5d4e87566138a62a18ee1d5fa5520d07\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3b7c93232a62c72e11adea10900b2495\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3b7c93232a62c72e11adea10900b2495\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\15ebe739147aac6c1a9736ec7f7880ce\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\15ebe739147aac6c1a9736ec7f7880ce\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\920d2f61af8412f69e056bdb7631154a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\920d2f61af8412f69e056bdb7631154a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d80d6085793b4b9105d15eb2607944ee\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d80d6085793b4b9105d15eb2607944ee\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\b8488d864841a76ee6dc6f054619a479\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\b8488d864841a76ee6dc6f054619a479\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\fa739c9138dd4de36cea3b2c80418384\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\fa739c9138dd4de36cea3b2c80418384\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\167ee857943b3a78debc4bb928099f74\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\167ee857943b3a78debc4bb928099f74\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\35e43493afd8276acebd7f83b8f09c04\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Satyendra\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\35e43493afd8276acebd7f83b8f09c04\AndroidManifest.xml:20:5-44
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
+INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml
+INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml
+MERGED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:7:5-9:41
+MERGED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\67304429fd6f0285872995a8432e9fd5\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\67304429fd6f0285872995a8432e9fd5\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\27dbea23d6765da2558c3be399ecb322\transformed\appcompat-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\27dbea23d6765da2558c3be399ecb322\transformed\appcompat-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Dell\.gradle\caches\8.9\transforms\7338e48bc38b6e2bdb8acdb1739f5971\transformed\jetified-volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Dell\.gradle\caches\8.9\transforms\7338e48bc38b6e2bdb8acdb1739f5971\transformed\jetified-volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Dell\.gradle\caches\8.9\transforms\557b8d74f2214c22ad7afc08ecf59e39\transformed\jetified-library-1.1.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Dell\.gradle\caches\8.9\transforms\557b8d74f2214c22ad7afc08ecf59e39\transformed\jetified-library-1.1.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Dell\.gradle\caches\8.9\transforms\7ad351a3ed0037b598f4b6ece392644d\transformed\jetified-SearchableSpinner-2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.MdFarhanRaja:SearchableSpinner:2.0] C:\Users\Dell\.gradle\caches\8.9\transforms\7ad351a3ed0037b598f4b6ece392644d\transformed\jetified-SearchableSpinner-2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\5b6da93c2aeb50bebd38ec065b266dee\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\5b6da93c2aeb50bebd38ec065b266dee\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\8fda86041d029c0bb955cb0289195498\transformed\fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\8fda86041d029c0bb955cb0289195498\transformed\fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\682b73a09f3bc05271b4356c521bad18\transformed\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\682b73a09f3bc05271b4356c521bad18\transformed\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\81ce8c7a057344985f3841fd9d24a63a\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\81ce8c7a057344985f3841fd9d24a63a\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\be421248a35ec5fe555609acbb32d067\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\be421248a35ec5fe555609acbb32d067\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\34c28fad3e772ca24615045b12ce8740\transformed\vectordrawable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\34c28fad3e772ca24615045b12ce8740\transformed\vectordrawable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\adb007c14c2c071ab3b24cb77db6230f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\adb007c14c2c071ab3b24cb77db6230f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\1e28bedbfb8b68e641f7a66baf22457b\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\1e28bedbfb8b68e641f7a66baf22457b\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\1b0e4ab4c0aca14bb6c8340f58aee45d\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\1b0e4ab4c0aca14bb6c8340f58aee45d\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\3fb3cbbaf8a777d26df4a45dc7e7d53b\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\3fb3cbbaf8a777d26df4a45dc7e7d53b\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\09affd9b983681489b155f785e3c2d05\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\09affd9b983681489b155f785e3c2d05\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\edc9ca6d3eb52ec4d614d5014eb12c1f\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\edc9ca6d3eb52ec4d614d5014eb12c1f\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\5ed0d82091302cf69b5c014f8831027b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\5ed0d82091302cf69b5c014f8831027b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\9f63ef89c4c3c6f1d362f57d9109f9cc\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\9f63ef89c4c3c6f1d362f57d9109f9cc\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\ba3c7012eb394a8dc0a458be64d6da39\transformed\core-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\ba3c7012eb394a8dc0a458be64d6da39\transformed\core-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\419bb6aadfd8d0041b7a63c6a1b900e6\transformed\versionedparcelable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\419bb6aadfd8d0041b7a63c6a1b900e6\transformed\versionedparcelable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\228169e7d9734f5896a867ef2ce0339d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\228169e7d9734f5896a867ef2ce0339d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\dadea2a7f2e02af1823e8468f28fe882\transformed\lifecycle-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\dadea2a7f2e02af1823e8468f28fe882\transformed\lifecycle-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\aab016fb87c78968e23ea3bc6a92bf09\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\aab016fb87c78968e23ea3bc6a92bf09\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\0812546590ecfea69142748fa226f9fa\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\0812546590ecfea69142748fa226f9fa\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\d53d435267cb5e41ab641fd0d4978474\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\d53d435267cb5e41ab641fd0d4978474\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\e0be6fdc13b168edc3af1a3c30316430\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\e0be6fdc13b168edc3af1a3c30316430\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\65f48f698e86a93d77a095f1da6a3c8a\transformed\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\65f48f698e86a93d77a095f1da6a3c8a\transformed\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\fa7f95e618a0318e9dfc747987d75c0a\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\fa7f95e618a0318e9dfc747987d75c0a\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\14ef87b45c8e3f6fe80ff8ab15e7ae0d\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\14ef87b45c8e3f6fe80ff8ab15e7ae0d\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\b9c5921174d386edce19f867c9442a20\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Dell\.gradle\caches\8.9\transforms\b9c5921174d386edce19f867c9442a20\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
+		INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-		ADDED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
-		INJECTED from D:\RFID_NEPAL\demo-uhf_as\src\main\AndroidManifest.xml
+		INJECTED from D:\PersonalProjects\Tarsem\UNL\demo-uhf_as\src\main\AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:12:22-71
+uses-permission#android.permission.CAMERA
+ADDED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:13:22-62
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:14:5-76
+	android:name
+		ADDED from [DeviceAPI_ver20231208_release.aar] C:\Users\Dell\.gradle\caches\8.9\transforms\62c955718a8d1b83cf981d2ac917c72f\transformed\jetified-DeviceAPI_ver20231208_release\AndroidManifest.xml:14:22-73

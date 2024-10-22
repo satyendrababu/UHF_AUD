@@ -18,7 +18,6 @@ import com.example.uhf.R;
 import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
-import com.rscja.deviceapi.RFIDWithUHF.BankEnum;
 
 import com.rscja.utility.StringUtility;
 
@@ -113,7 +112,7 @@ public class UHFWriteFragment extends KeyDwonFragment implements OnClickListener
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case  R.id.rbEPC_filter_wt:
+            /*case  R.id.rbEPC_filter_wt:
                 etPtr_filter_wt.setText("32");
                 break;
             case  R.id.rbTID_filter_wt:
@@ -124,7 +123,7 @@ public class UHFWriteFragment extends KeyDwonFragment implements OnClickListener
                 break;
             case R.id.BtWrite:
                 write();
-                break;
+                break;*/
        }
     }
 

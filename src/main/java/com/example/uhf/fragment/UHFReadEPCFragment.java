@@ -3,6 +3,7 @@ package com.example.uhf.fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -38,7 +39,9 @@ import com.example.uhf.R;
 import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
+import com.rscja.deviceapi.entity.Gen2Entity;
 import com.rscja.deviceapi.entity.ISO15693Entity;
+import com.rscja.deviceapi.entity.UHFTAGInfo;
 import com.uhf.api.cls.Reader;
 
 import java.util.ArrayList;
@@ -98,6 +101,10 @@ public class UHFReadEPCFragment extends KeyDwonFragment {
 		super.onActivityCreated(savedInstanceState);
 
 		mContext = (UHFMainActivity) getActivity();
+		initSound();
+		/*IntentFilter filter = new IntentFilter();
+		filter.addAction("android.rfid.FUN_KEY");
+		requireContext().registerReceiver(keyReceiver, filter);*/
 
 		tagList = new ArrayList<HashMap<String, String>>();
 
@@ -540,11 +547,13 @@ public class UHFReadEPCFragment extends KeyDwonFragment {
 			String strResult;
 
 			String[] res = null;
-			ISO15693Entity entity = null;
+			//ISO15693Entity entity = null;
+			UHFTAGInfo entity = null;
 
 			while (loopFlag) {
+				entity = mContext.mRFID.readTagFromBuffer();
 
-				if(UHFMainActivity.mUhfrManager != null) {
+				if(entity != null) {
 
 					list1 = UHFMainActivity.mUhfrManager.tagInventoryByTimer((short) 50);
 					Log.e("UNL New List", list1 + "");
@@ -554,9 +563,9 @@ public class UHFReadEPCFragment extends KeyDwonFragment {
 						Log.e(TAG, list1.size() + "");
 
 						playSound(1);
-                   /* if(isPlay) {
+                    if(isPlay) {
                         Util.play(1, 0);
-                    }*/
+                    }
 
 						for (Reader.TAGINFO tfs : list1) {
 							byte[] epcdata = tfs.EpcId;
@@ -644,7 +653,13 @@ public class UHFReadEPCFragment extends KeyDwonFragment {
 //                                 keyCode == KeyEvent.KEYCODE_F4 ||
 								keyCode == KeyEvent.KEYCODE_F4  || keyCode == KeyEvent.KEYCODE_F7)) {
 //                Log.e("key ","inventory.... " ) ;
-					readTag();
+					if (BtInventory.getText().equals("Start")) {
+						BtInventory.setText("Stop");
+						readTag();
+					}else {
+						BtInventory.setText("Start");
+						stopInventory();
+					}
 				}
 				return;
 			} else if (keyDown) {

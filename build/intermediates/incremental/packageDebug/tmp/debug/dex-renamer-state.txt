@@ -1,4 +1,4 @@
-#Thu Feb 02 21:51:39 IST 2023
-base.0=D\:\\RFID_NEPAL\\demo-uhf_as\\build\\intermediates\\transforms\\dexMerger\\debug\\51
+#Mon Oct 21 23:26:28 IST 2024
+base.0=D\:\\PersonalProjects\\Tarsem\\UNL\\demo-uhf_as\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

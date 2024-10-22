@@ -48,7 +48,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.esotericsoftware.kryo.util.Util;
 import com.example.uhf.R;
 import com.example.uhf.Utilities.Common;
 import com.example.uhf.Utilities.ServerUrls;
@@ -62,6 +61,7 @@ import com.example.uhf.adapter.AuditListAdapter;
 import com.example.uhf.adapter.ListClickAdapter;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
+import com.rscja.deviceapi.RFIDWithUHFUART;
 import com.rscja.deviceapi.entity.ISO15693Entity;
 import com.rscja.deviceapi.exception.RFIDReadFailureException;
 import com.uhf.api.cls.Reader;
@@ -92,10 +92,12 @@ public class UHFInventoryFragment extends KeyDwonFragment{
     private boolean loopFlag = false;
     private int inventoryFlag = 0;
     private LinearLayout llQValue;
+    private UHFMainActivity mContext;
     Handler handler;
     Handler searchHandler;
     private ArrayList<HashMap<String, String>> tagList;
     SimpleAdapter adapter;
+    private RFIDWithUHFUART mRFID;
 
     Button BtClear;
     TextView tv_count;
@@ -112,7 +114,7 @@ public class UHFInventoryFragment extends KeyDwonFragment{
 
     byte initQ;
     private LinearLayout llContinuous;
-    private UHFMainActivity mContext;
+
     private HashMap<String, String> map;
     ServerUrls serverUrls;
 
@@ -155,9 +157,9 @@ public class UHFInventoryFragment extends KeyDwonFragment{
         super.onActivityCreated(savedInstanceState);
         serverUrls = new ServerUrls();
         initSound();
-        IntentFilter filter = new IntentFilter();
-        filter.addAction("android.rfid.FUN_KEY");
-        getActivity().getApplicationContext().registerReceiver(keyReceiver, filter);
+        //IntentFilter filter = new IntentFilter();
+        //filter.addAction("android.rfid.FUN_KEY");
+        //requireContext().registerReceiver(keyReceiver, filter);
 
 
         mContext = (UHFMainActivity) getActivity();
@@ -294,13 +296,13 @@ public class UHFInventoryFragment extends KeyDwonFragment{
         LvTags.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                String selectedItem = adapter.getItem(position).toString();
+                /*String selectedItem = adapter.getItem(position).toString();
                 String[] strArr = {selectedItem,""};
                 String[] strArr1 = strArr[0].split("tagUii");
                 String[] strArr2 = strArr1[1].split("=");
                 String strArr3 = strArr2[1].replace("}","");
                 String clickedItem = strArr3;
-                scanTagSubItem(clickedItem);
+                scanTagSubItem(clickedItem);*/
             }
         });
 
@@ -659,7 +661,7 @@ public class UHFInventoryFragment extends KeyDwonFragment{
 
     private void scanAndReadTag() {
         int switchCase = 0;
-        if (btSearch.getText().equals("Scan") )
+        if (btSearch.getText().equals("Scan"))
         {
             BtClear.setEnabled(false);
             btUpdate.setEnabled(false);
@@ -716,8 +718,10 @@ public class UHFInventoryFragment extends KeyDwonFragment{
                     break;
             }
         }
-        else {
-            stopSearch();
+        else if(loopFlag){
+            stopInventory();
+        }else {
+            stopInventory();
         }
     }
 
@@ -739,7 +743,9 @@ public class UHFInventoryFragment extends KeyDwonFragment{
 
             setViewEnabled(true);
             btUpdate.setText("Update");
-            UHFMainActivity.mUhfrManager.asyncStopReading();
+            BtClear.setEnabled(true);
+            btUpdate.setEnabled(true);
+            //UHFMainActivity.mUhfrManager.asyncStopReading();
             btSearch.setText("Scan");
             btSearch.setBackground(getResources().getDrawable(R.drawable.button_bg_up3));
             /*if (mContext.mReader.stopInventory()) {
@@ -749,13 +755,13 @@ public class UHFInventoryFragment extends KeyDwonFragment{
                 UIHelper.ToastMessage(mContext,
                         R.string.uhf_msg_inventory_stop_fail);
 
-            }*/
-
+            }
+*/
         }
     }
 
 
-    private void stopSearch() {
+    /*private void stopSearch() {
 
         if (loopFlag) {
 
@@ -771,29 +777,29 @@ public class UHFInventoryFragment extends KeyDwonFragment{
                 }
                 BtClear.setEnabled(true);
                 btUpdate.setEnabled(true);
-            /*} else {
+            *//*} else {
                 UIHelper.ToastMessage(mContext,
                         R.string.uhf_msg_inventory_stop_fail);
 
-            }*/
+            }*//*
 
         }
         else{
             Toast.makeText(mContext, scannedItemSet.size(),Toast.LENGTH_SHORT).show();
-            UHFMainActivity.mUhfrManager.asyncStopReading();
-            //if (mContext.mReader.stopInventory()) {
+            //UHFMainActivity.mUhfrManager.asyncStopReading();
+            if (mContext.mReader.stopInventory()) {
 
                 btSearch.setText("Scan");
                 ((UHFMainActivity)getActivity()).sendData(btSearch.getText().toString());
                 btSearch.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bg3));
-            /*}
+            }
             else {
                 UIHelper.ToastMessage(mContext,
                         R.string.uhf_msg_inventory_stop_fail);
 
-            }*/
+            }
         }
-    }
+    }*/
 
     public int checkIsExist(String strEPC) {
         int existFlag = -1;
@@ -842,7 +848,10 @@ public class UHFInventoryFragment extends KeyDwonFragment{
           //  ISO15693Entity entity = null;
 
 
-            while (loopFlag) {
+            /*while (loopFlag) {
+
+                entity = mContext.mRFID.inventorySingleTag(); // inventory();
+
                 if(UHFMainActivity.mUhfrManager != null) {
                     list1 = UHFMainActivity.mUhfrManager.tagInventoryByTimer((short) 50);
                     Log.e("UNL New List", list1 + "");
@@ -852,24 +861,15 @@ public class UHFInventoryFragment extends KeyDwonFragment{
                         Log.e(TAG, list1.size() + "");
 
                         playSound(1);
-                   /* if(isPlay) {
-                        Util.play(1, 0);
-                    }*/
+
 
                         for (Reader.TAGINFO tfs : list1) {
                             byte[] epcdata = tfs.EpcId;
 
                             data = Tools.Bytes2HexString(epcdata, epcdata.length);
 
-                            int rssi = tfs.RSSI;
-                            //    Message msg = new Message();
-                            //  msg.what = 1;
-                            //  Bundle b = new Bundle();
-                            // b.putString("data", data);
                             Log.e("UNL DATA", "***" + data);
-                            // b.putString("rssi", rssi + "");
-                            //   msg.setData(b);
-                            //  handler1.sendMessage(msg);
+
 
                         }
 
@@ -914,16 +914,16 @@ public class UHFInventoryFragment extends KeyDwonFragment{
 
 
 
-/*
+*//*
                 //res = mContext.mReader.readTagFromBuffer();
                 msg = new Message();
                 try {
                     entity = mContext.mRFID.inventory();
 
                     if (entity != null) {
-                        *//*msg.arg1 = 1;
+                        *//**//*msg.arg1 = 1;
                         msg.obj = entity;
-                        searchHandler.sendMessage(msg);*//*
+                        searchHandler.sendMessage(msg);*//**//*
                         Log.e("kya",""+entity.getId());
 
                         if(tagIdHashMap.containsKey(entity.getId()))
@@ -955,13 +955,13 @@ public class UHFInventoryFragment extends KeyDwonFragment{
                 } catch (InterruptedException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
-                }*/
+                }*//*
 
-            }
+            }*/
         }
     }
 
-    @Override
+   /* @Override
     public void myOnKeyDwon() {
 
         if(spAuditLocations.getSelectedItem().toString().equalsIgnoreCase("Select Location")){
@@ -975,7 +975,7 @@ public class UHFInventoryFragment extends KeyDwonFragment{
                 showServerErrorDialog();
             }
         }
-    }
+    }*/
 
 
     public void generateAuditLocationList(){
@@ -1174,9 +1174,9 @@ public class UHFInventoryFragment extends KeyDwonFragment{
         TextView textTitle = (TextView) view.findViewById(R.id.textTitle);
         textTitle.setText("Inventory Updated Successfully!!!");
         if (totalItem >1)
-            textMessage.setText(totalItem+" Items updated in "+location+" location");
+            textMessage.setText(totalItem+" Assets Updated in "+location+" Location");
         else
-            textMessage.setText(totalItem+" Item updated in "+location+" location");
+            textMessage.setText(totalItem+" Asset Updated in "+location+" Location");
         Button okBtn = (Button) view.findViewById(R.id.okBtn);
         Button cancelBtn = (Button)view.findViewById(R.id.cancelBtn);
         View dividerView = (View)view.findViewById(R.id.dividerView);
@@ -1246,17 +1246,21 @@ public class UHFInventoryFragment extends KeyDwonFragment{
 //                                 keyCode == KeyEvent.KEYCODE_F4 ||
                                 keyCode == KeyEvent.KEYCODE_F4  || keyCode == KeyEvent.KEYCODE_F7)) {
 //                Log.e("key ","inventory.... " ) ;
-                    if(spAuditLocations.getSelectedItem().toString().equalsIgnoreCase("Select Location")){
-                        Toast.makeText(mContext, "Select Audit Location...!", Toast.LENGTH_SHORT).show();
-                    }
-                    else{
-                        if (!tagIdHashMap.isEmpty()) {
-                            ValidateConnection();
-                        }else {
-                            //Toast.makeText(mContext, "Server Disconnected, Check Your Network", Toast.LENGTH_SHORT).show();
-                            showServerErrorDialog();
+                    if (!loopFlag) {
+                        if (spAuditLocations.getSelectedItem().toString().equalsIgnoreCase("Select Location")) {
+                            Toast.makeText(mContext, "Select Audit Location...!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            if (!tagIdHashMap.isEmpty()) {
+                                ValidateConnection();
+                            } else {
+                                //Toast.makeText(mContext, "Server Disconnected, Check Your Network", Toast.LENGTH_SHORT).show();
+                                showServerErrorDialog();
+                            }
                         }
+                    }else {
+                        stopInventory();
                     }
+
                 }
                 return;
             } else if (keyDown) {

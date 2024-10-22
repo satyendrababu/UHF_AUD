@@ -1,0 +1,406 @@
+[
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_dspl.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/dspl.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_audit_list_items.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/audit_list_items.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_activity_uhfset.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/activity_uhfset.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_button_bg_white1.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/button_bg_white1.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg3.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg3.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_success4.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/success4.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_readtag_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_readtag_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_already.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/already.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_close.png.flat",
+        "source": "com.example.uhf-main-13:/drawable/close.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_search_tag_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_search_tag_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_activity_login.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/menu_menu.xml.flat",
+        "source": "com.example.uhf-main-13:/menu/menu.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg2.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg2.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_actionbar_back.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/actionbar_back.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_logo_transparent.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/logo_transparent.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_dialog_frequency.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_dialog_frequency.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_audit.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/audit.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_asset.jpg.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/asset.jpg"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_delete.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/delete.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_scan_child_items.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/scan_child_items.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_badge_layout.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/badge_layout.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_logout.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/logout.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_popwindow_filter.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/popwindow_filter.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/menu_main.xml.flat",
+        "source": "com.example.uhf-main-13:/menu/main.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_activity_home.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/raw_barcodebeep.ogg.flat",
+        "source": "com.example.uhf-main-13:/raw/barcodebeep.ogg"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_button_bg1.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/button_bg1.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg_up.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg_up.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_tagging1.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/tagging1.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_item_text1.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/item_text1.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_ic_back.png.flat",
+        "source": "com.example.uhf-main-13:/drawable/ic_back.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg_down3.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg_down3.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_button_bg_up1.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/button_bg_up1.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/anim_slide_left_in.xml.flat",
+        "source": "com.example.uhf-main-13:/anim/slide_left_in.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg_down2.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg_down2.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_button_bg_white.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/button_bg_white.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_sure_alert_dialog.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/sure_alert_dialog.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_success.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/success.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_button_bg4.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/button_bg4.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_library.jpg.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/library.jpg"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/anim_slide_right_in.xml.flat",
+        "source": "com.example.uhf-main-13:/anim/slide_right_in.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_rb_bg.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/rb_bg.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_bage_circle.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/bage_circle.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_network_error_dialog.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/network_error_dialog.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_rfid2.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/rfid2.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_webtext.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/webtext.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_success2.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/success2.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_activity_report.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/activity_report.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_wifi_disconnected.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/wifi_disconnected.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_listtag_items.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/listtag_items.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_vts.jpg.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/vts.jpg"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_empty.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/empty.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg_down.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg_down.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_check_text_color.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/check_text_color.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/anim_grow_from_topleft_to_bottomright.xml.flat",
+        "source": "com.example.uhf-main-13:/anim/grow_from_topleft_to_bottomright.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/raw_scan.ogg.flat",
+        "source": "com.example.uhf-main-13:/raw/scan.ogg"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_button_bg_down1.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/button_bg_down1.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_list_click_items.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/list_click_items.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_write_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_write_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_custom_action_bar.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/custom_action_bar.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_ic_launcher.png.flat",
+        "source": "com.example.uhf-main-13:/drawable/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_check_text_color2.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/check_text_color2.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_read_epc_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_read_epc_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_inventory_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_inventory_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_wms.jpg.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/wms.jpg"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_tagging.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/tagging.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_read_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_read_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_card_normal.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/card_normal.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/raw_serror.ogg.flat",
+        "source": "com.example.uhf-main-13:/raw/serror.ogg"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_dialog_lock_code.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_dialog_lock_code.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_fragment_deactivate.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/fragment_deactivate.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_tagging_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_tagging_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_kill_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_kill_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg_up3.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg_up3.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_activity_main.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_rectangle_bg1.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/rectangle_bg1.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_remove.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/remove.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg_gray.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg_gray.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_rounded_view_layout.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/rounded_view_layout.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_button_bg_up2.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/button_bg_up2.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/anim_slide_left_out.xml.flat",
+        "source": "com.example.uhf-main-13:/anim/slide_left_out.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_rectangle_bg.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/rectangle_bg.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_fragment_main.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_activity_audit.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/activity_audit.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_dialog_content.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/dialog_content.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_message_dialog.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/message_dialog.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_rectangle_bg2.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/rectangle_bg2.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_ip_address_layout.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/ip_address_layout.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_unilever.png.flat",
+        "source": "com.example.uhf-main-13:/drawable/unilever.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_checkmark.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/checkmark.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_uhf_lock_fragment.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/uhf_lock_fragment.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_report.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/report.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_dialoge_list.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/dialoge_list.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_login.gif.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/login.gif"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable_card_press.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable/card_press.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_button_bg_gray1.xml.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/button_bg_gray1.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/anim_slide_right_out.xml.flat",
+        "source": "com.example.uhf-main-13:/anim/slide_right_out.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/layout_fragment_blank.xml.flat",
+        "source": "com.example.uhf-main-13:/layout/fragment_blank.xml"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-hdpi_rfid_logo.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-hdpi/rfid_logo.png"
+    },
+    {
+        "merged": "com.example.uhf-debug-11:/drawable-mdpi_banner.png.flat",
+        "source": "com.example.uhf-main-13:/drawable-mdpi/banner.png"
+    }
+]

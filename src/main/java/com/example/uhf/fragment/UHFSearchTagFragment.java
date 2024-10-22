@@ -3,6 +3,7 @@ package com.example.uhf.fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -141,6 +142,11 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
         serverUrls = new ServerUrls();
 
         mContext = (UHFMainActivity) getActivity();
+
+        initSound();
+        /*IntentFilter filter = new IntentFilter();
+        filter.addAction("android.rfid.FUN_KEY");
+        requireContext().registerReceiver(keyReceiver, filter);*/
 
         tagList = new ArrayList<HashMap<String, String>>();
 
@@ -458,6 +464,7 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
                                     missingTaggingListObj.setItem_id(jo.getString("item_id"));
                                     missingTaggingListObj.setTag_id(jo.getString("tag_id"));
                                     missingTaggingListObj.setTitle(jo.getString("title"));
+                                    missingTaggingListObj.setLocation_id(jo.getString("location_id"));
 
 
                                     accNoHashMap.put(jo.getString("item_id"),missingTaggingListObj);
@@ -752,9 +759,9 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
             String[] res = null;
             ISO15693Entity entity = null;
 
-            while (loopFlag) {
+            /*while (loopFlag) {
                 if(UHFMainActivity.mUhfrManager != null) {
-                    list1 = UHFMainActivity.mUhfrManager.tagInventoryByTimer((short) 50);
+                    //list1 = UHFMainActivity.mUhfrManager.tagInventoryByTimer((short) 50);
                     Log.e("UNL New List", list1 + "");
                     String data = null;
                     //  handler1.sendEmptyMessage(1980);
@@ -762,9 +769,9 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
                         Log.e(TAG, list1.size() + "");
 
                         playSound(1);
-                   /* if(isPlay) {
+                   *//* if(isPlay) {
                         Util.play(1, 0);
-                    }*/
+                    }*//*
 
                         for (Reader.TAGINFO tfs : list1) {
                             byte[] epcdata = tfs.EpcId;
@@ -790,12 +797,12 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
                     // searchHandler.sendMessage(msg);
                     Log.e("MY UNL", "***" + data);
                     //  Log.e("DATABASE","***"+tagIdHashMap);
-                    if (tagIdHashMap.containsKey(data)) {
+                    *//*if (tagIdHashMap.containsKey(data)) {
                         if (data != null) {
 
                             Log.e("Tag Id", "***" + tagIdHashMap.get(data).getLocation_id());
 
-                            String myLocation = tagIdHashMap.get(data).getLocation_id().trim();
+                            String myLocation = tagIdHashMap.get(data).getLocation_id();
                             tagging = tagIdHashMap.get(data);
                             if (myLocation.equals(selectedLocation.trim())) {
                                 Log.e("Inside EPC", "***");
@@ -812,6 +819,14 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
                         }
                     } else {
                         Log.e("Inside Else","***"+data);
+                    }*//*
+                    if(uniqueItemId.equalsIgnoreCase(data)){
+                        tt = tagIdHashMap.get(data);
+                        msg.obj = tt.getItem_id().toString().trim() + "@"
+                                + tt.getTitle().toString().trim();
+                        searchHandler.sendMessage(msg);
+                        //btSearch.setText("Search");
+                        loopFlag = false;
                     }
 
                     try {
@@ -822,7 +837,7 @@ public class UHFSearchTagFragment extends KeyDwonFragment {
                     }
                 }
 
-            }
+            }*/
         }
     }
 

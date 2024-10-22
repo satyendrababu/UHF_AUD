@@ -6,7 +6,11 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -16,9 +20,7 @@ import android.media.SoundPool;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.text.TextUtils;
-import android.util.Base64;
+
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -49,7 +51,7 @@ import com.example.uhf.Utilities.Tagging;
 import com.example.uhf.Utilities.VolleySingleton;
 import com.example.uhf.tools.UIHelper;
 import com.handheld.uhfr.UHFRManager;
-import com.rscja.deviceapi.RFIDWithUHF;
+import com.rscja.deviceapi.RFIDWithUHFUART;
 import com.uhf.api.cls.Reader;
 
 import org.json.JSONArray;
@@ -65,7 +67,6 @@ import java.util.Map;
 import cn.pda.serialport.Tools;
 import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
 import in.galaxyofandroid.spinerdialog.SpinnerDialog;
-import io.paperdb.Paper;
 
 import static android.content.ContentValues.TAG;
 
@@ -75,7 +76,7 @@ public class UHFTaggingActivity extends Activity {
 	private final static String TAG = "MainActivity";
 	public static String TAG_LOCATION = "location";
 	public static boolean isSaved = false;
-	public RFIDWithUHF mReader;
+	public RFIDWithUHFUART mReader;
 	Common common = new Common();
 
 	private TextView spTaggingLocation, spTaggingItemId, spTaggingSerialNo;
@@ -97,16 +98,18 @@ public class UHFTaggingActivity extends Activity {
 	private ScanUtil instance;
 	public static UHFRManager mUhfrManager;
 
-	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
 	        setContentView(R.layout.uhf_tagging_fragment);
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 			ActionBar actionBar = (ActionBar) getActionBar();
-		actionBar.setBackgroundDrawable(this.getDrawable(R.drawable.banner));
+		actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.banner));
 		actionBar.setTitle("");
 		actionBar.setIcon(android.R.color.transparent);
+		/*IntentFilter filter = new IntentFilter();
+		filter.addAction("android.rfid.FUN_KEY");
+		registerReceiver(keyReceiver, filter);*/
         serverUrls = new ServerUrls();
 		//	initUHF();
 			initSound();
@@ -115,7 +118,7 @@ public class UHFTaggingActivity extends Activity {
 	        //initTabs();
 		//*************************************************************************************
 		mSharedPreferences = getSharedPreferences("UHF", MODE_PRIVATE);
-		Paper.init(this);
+		//Paper.init(this);
 		spTaggingLocation = (TextView) findViewById(R.id.spTaggingLocation);
 		spTaggingItemId = (TextView) findViewById(R.id.spTaggingItemId);
 		//spTaggingSerialNo = (TextView) findViewById(R.id.spTaggingSerialNo);
@@ -155,7 +158,9 @@ public class UHFTaggingActivity extends Activity {
 				//read tag id here...
 				//fetchImageFromUrl("showPainingSmallImage","SAMC-OKH-GF-CHESS-101");
 				//getAssetDetails("SAMC-OKH-GF-CHESS-101");
-				String userName = Paper.book("userName").read(Common.USER_KEY);
+				//String userName = Paper.book().read(Common.USER_KEY);
+				String userName = mSharedPreferences.getString(Common.USER_KEY,"");
+
 				if (!btSearchTag.getText().toString().equalsIgnoreCase("Delete"))
 					readTagForTagging();
 				else
@@ -174,14 +179,14 @@ public class UHFTaggingActivity extends Activity {
 						Toast.makeText(UHFTaggingActivity.this, "Select tagging location first", Toast.LENGTH_LONG).show();
 					}
 					else {
-						Paper.book("location").write(TAG_LOCATION, spTaggingLocation.getText().toString());
+						//Paper.book("location").write(TAG_LOCATION, spTaggingLocation.getText().toString());
 						isSaved = true;
 						spTaggingLocation.setClickable(false);
 					}
 				}
 				else
 				{
-					Paper.book("location").destroy();
+					//Paper.book("location").destroy();
 					isSaved = false;
 					spTaggingLocation.setText(null);
 					spTaggingLocation.setClickable(true);
@@ -189,7 +194,8 @@ public class UHFTaggingActivity extends Activity {
 			}
 		});
 
-		String location = Paper.book("location").read(TAG_LOCATION);
+		//String location = Paper.book("location").read(TAG_LOCATION);
+		String location = " paper";
 		if (location !=null)
 		{
 			spTaggingLocation.setText(location);
@@ -210,7 +216,8 @@ public class UHFTaggingActivity extends Activity {
 				}
 				else
 				{
-					String userName = Paper.book("userName").read(Common.USER_KEY);
+					//String userName = Paper.book().read(Common.USER_KEY);
+					String userName = "paer";
 					if(userName ==null) {
 						saveData(et_read_epc.getText().toString(),
 								spTaggingLocation.getText().toString(),
@@ -384,7 +391,7 @@ public class UHFTaggingActivity extends Activity {
 										spTaggingLocation.setText(jo.getString("location_id"));
 										spTaggingItemId.setText(jo.getString("item_id"));
 										et_description.setText(jo.getString("title"));
-										getImageByAssetId(jo.getString("item_id"));
+										//(jo.getString("item_id"));
 										btSearchTag.setText("Delete");
 										btSearchTag.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bg2));
 										playSound(2);
@@ -435,7 +442,7 @@ public class UHFTaggingActivity extends Activity {
 		pDialog.setCancelable(false);
 		pDialog.show();
 
-		StringRequest stringRequest = new StringRequest(Request.Method.POST, serverUrls.URL_ALL_ASSET_LOCATION,
+		StringRequest stringRequest = new StringRequest(Request.Method.POST, serverUrls.URL_TAGGING_ASSET_LOCATION,
 				new Response.Listener<String>() {
 					@Override
 					public void onResponse(String response) {
@@ -510,7 +517,7 @@ public class UHFTaggingActivity extends Activity {
 									//itemIdList.add(jo.getString("asset_id")+"#"+jo.getString("asset_id"));
                                     itemIdList.add(jo.getString("asset_id"));
 								}
-								/*adapter = new ArrayAdapter<String>(UHFTaggingActivity.this, android.R.layout.simple_spinner_item, spTitle);
+								adapter = new ArrayAdapter<String>(UHFTaggingActivity.this, android.R.layout.simple_spinner_item, spTitle);
 								spinnerDialog=new SpinnerDialog(UHFTaggingActivity.this,  itemIdList,"Select or Search Item","Close");// With No Animation
 								//spinnerDialog=new SpinnerDialog(UHFTaggingActivity.this,items,"Select or Search City",R.style.DialogAnimations_SmileWindow,"Close Button Text");
 								spinnerDialog.setCancellable(false);
@@ -521,11 +528,11 @@ public class UHFTaggingActivity extends Activity {
 									public void onClick(String item, int position) {
 										spTaggingItemId.setText(item);
 										getAssetDetails(item);
-										getImageByAssetId(item);
+										//getImageByAssetId(item);
 
 										//Toast.makeText(UHFTaggingActivity.this, item + "  " + position+"", Toast.LENGTH_SHORT).show();
 									}
-								});*/
+								});
 
 							} catch (JSONException e) {
 								e.printStackTrace();
@@ -573,8 +580,9 @@ public class UHFTaggingActivity extends Activity {
 								{
 									JSONObject jo = jsonArray.getJSONObject(i);
 									et_description.setText(jo.getString("title"));
+									Log.d("TITLE","TITLE"+jo.getString("title"));
 								}
-								//Log.d("DISHA","DISHA"+jo.getString("title"));
+
 
 							} catch (JSONException e) {
 								e.printStackTrace();
@@ -652,6 +660,7 @@ public class UHFTaggingActivity extends Activity {
 				params.put("asset_id", itemId);
 				params.put("title", description);
 				params.put("concern_person", userName);
+				params.put("user_id", userName);
 				return params;
 			}
 		};
@@ -720,7 +729,7 @@ public class UHFTaggingActivity extends Activity {
 		if (!response.equalsIgnoreCase("success"))
 		{
 			imgSuccess.setImageResource(R.drawable.already);
-			txtMessage.setText("Your operation already done earlier...");
+			txtMessage.setText(response);
 		}
 		else
 		{
@@ -751,7 +760,8 @@ public class UHFTaggingActivity extends Activity {
 		alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialogInterface, int i) {
-				String userName = Paper.book("userName").read(Common.USER_KEY);
+				//String userName = Paper.book().read(Common.USER_KEY);
+				String userName = "";
 				if (userName == null)
 				{
 					deleteTaggedItem(tag_id, asset_id, Common.userName);
@@ -874,7 +884,7 @@ public class UHFTaggingActivity extends Activity {
 		mActionBar.setDisplayHomeAsUpEnabled(true);
 		mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);*/
 		try {
-			mReader = RFIDWithUHF.getInstance();
+			mReader = RFIDWithUHFUART.getInstance();
 		} catch (Exception ex) {
 
 			Toast.makeText(this, ""+ex.getMessage(), Toast.LENGTH_SHORT).show();
@@ -1060,5 +1070,45 @@ public class UHFTaggingActivity extends Activity {
 		}
 		mToast.show();
 	}
+
+	//key receiver
+	private long startTime = 0;
+	private boolean keyUpFalg = true;
+	private BroadcastReceiver keyReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+
+			int keyCode = intent.getIntExtra("keyCode", 0);
+			if (keyCode == 0) {//H941
+				keyCode = intent.getIntExtra("keycode", 0);
+			}
+//            Log.e("key ","keyCode = " + keyCode) ;
+			boolean keyDown = intent.getBooleanExtra("keydown", false);
+//			Log.e("key ", "down = " + keyDown);
+			if (keyUpFalg && keyDown && System.currentTimeMillis() - startTime > 500) {
+				keyUpFalg = false;
+				startTime = System.currentTimeMillis();
+				if ((//keyCode == KeyEvent.KEYCODE_F1 || keyCode == KeyEvent.KEYCODE_F2
+						keyCode == KeyEvent.KEYCODE_F3 ||
+//                                 keyCode == KeyEvent.KEYCODE_F4 ||
+								keyCode == KeyEvent.KEYCODE_F4  || keyCode == KeyEvent.KEYCODE_F7)) {
+//                Log.e("key ","inventory.... " ) ;
+					//String userName = Paper.book().read(Common.USER_KEY);
+					String userName = "paper";
+					if (!btSearchTag.getText().toString().equalsIgnoreCase("Delete"))
+						readTagForTagging();
+					else
+						alertDialog(et_read_epc.getText().toString(),spTaggingItemId.getText().toString(),userName);
+
+				}
+				return;
+			} else if (keyDown) {
+				startTime = System.currentTimeMillis();
+			} else {
+				keyUpFalg = true;
+			}
+
+		}
+	};
 
 }

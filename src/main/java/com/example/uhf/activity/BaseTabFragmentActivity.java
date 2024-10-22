@@ -7,19 +7,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
+
 import android.widget.Toast;
+
+import androidx.fragment.app.FragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,10 +23,10 @@ import com.example.uhf.fragment.KeyDwonFragment;
 import com.example.uhf.tools.UIHelper;
 import com.example.uhf.widget.NoScrollViewPager;
 import com.rscja.deviceapi.RFIDWithISO15693;
-import com.rscja.deviceapi.RFIDWithUHF;
+import com.rscja.deviceapi.RFIDBase;
+import com.rscja.deviceapi.RFIDWithUHFUART;
 import com.rscja.utility.StringUtility;
 
-import io.paperdb.Paper;
 
 /**
  * Created by Administrator on 2015-03-10.
@@ -53,7 +46,7 @@ public class BaseTabFragmentActivity extends FragmentActivity {
 	protected List<String> lstTitles = new ArrayList<String>();
 
 	// public Reader mReader;
-	//public RFIDWithISO15693 mRFID;
+	public RFIDWithUHFUART mRFID;
 	private int index = 0;
 
 	private ActionBar.Tab tab_kill, tab_lock, tab_set ;
@@ -74,15 +67,15 @@ public class BaseTabFragmentActivity extends FragmentActivity {
 		mActionBar.setDisplayHomeAsUpEnabled(true);
 		mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		try {
-			//mRFID = RFIDWithISO15693.getInstance();
+			mRFID = RFIDWithUHFUART.getInstance();
 		} catch (Exception ex) {
 
 			toastMessage(ex.getMessage());
 
 			return;
 		}
-
-		/*if (mRFID != null) {
+/*
+		if (mRFID != null) {
 			new InitTask().execute();
 		}*/
 	}
@@ -243,8 +236,8 @@ public class BaseTabFragmentActivity extends FragmentActivity {
 		@Override
 		protected Boolean doInBackground(String... params) {
 			// TODO Auto-generated method stub
-			//return mRFID.init();
-			return true;
+			return mRFID.init();
+
 		}
 
 		@Override
@@ -275,9 +268,9 @@ public class BaseTabFragmentActivity extends FragmentActivity {
 	@Override
 	protected void onDestroy() {
 
-		/*if (mRFID != null) {
+		if (mRFID != null) {
 			mRFID.free();
-		}*/
+		}
 		super.onDestroy();
 	}
 

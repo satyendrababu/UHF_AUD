@@ -24,7 +24,7 @@ public class Common {
 
     public static final String USER_KEY = "User";
     public static final String PWD_KEY = "Password";
-    public static String URL_CONTEXT;
+    public static String URL_CONTEXT = "url_context";
     public static String userName = "";
     public static final String FILE_NAME = "IpConfig.txt";
     public static String USER_ID;

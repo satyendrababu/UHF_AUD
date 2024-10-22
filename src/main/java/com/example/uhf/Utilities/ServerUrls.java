@@ -5,8 +5,6 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import io.paperdb.Paper;
-
 public class ServerUrls {
 
 
@@ -35,6 +33,7 @@ public class ServerUrls {
     public String URL_IMAGE_BY_ASSET_ID = ContextUrl+"ImageAction.do?action=showPainingSmallImage&asset_id=";
     public String URL_VALIDATE_RFID_TAG = ContextUrl+"ValidateRFIDTag";
     public String URL_ALL_ASSET_LOCATION = ContextUrl+"getAuditLocation";
+    public String URL_TAGGING_ASSET_LOCATION = ContextUrl+"AllAssetLocation";
     public String URL_ALL_UNTAGGED_ASSET_BY_LOCATION = ContextUrl+"AllUnTaggedAssetByAssetLocation";
     public String URL_ASSET_DETAILS_BY_ASSET_ID = ContextUrl+"AssetDetailsByAssetId";
     public String URL_TAG_NEW_ASSET = ContextUrl+"TagAsset";

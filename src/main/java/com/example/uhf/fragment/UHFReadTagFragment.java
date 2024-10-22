@@ -32,8 +32,7 @@ import com.example.uhf.R;
 import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.rscja.deviceapi.RFIDWithUHF;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;

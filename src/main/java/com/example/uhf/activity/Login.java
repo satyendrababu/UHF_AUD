@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -35,7 +36,6 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.paperdb.Paper;
 
 public class Login extends Activity {
 
@@ -49,6 +49,7 @@ public class Login extends Activity {
     ServerUrls serverUrls;
     private AlertDialog dialog;
     private Button btnCheckServerIp;
+    private SharedPreferences mSharedPreferences;
 
 
     @Override
@@ -56,6 +57,7 @@ public class Login extends Activity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_login);
+        mSharedPreferences = getSharedPreferences("UHF", MODE_PRIVATE);
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayShowCustomEnabled(true);
@@ -70,26 +72,26 @@ public class Login extends Activity {
         ckbRemember = (CheckBox) findViewById(R.id.ckbRemember);
         btnCheckServerIp = (Button) findViewById(R.id.btnCheckServerIp);
 
-        Paper.init(this);
+        //Paper.init(this);
 
         validateConnection();
+        //need to change local db
+//        String user = Paper.book().read(Common.USER_KEY);
+//        String pwd = Paper.book().read(Common.PWD_KEY);
+        String user = mSharedPreferences.getString(Common.USER_KEY,"");
+        String pwd = mSharedPreferences.getString(Common.PWD_KEY,"");
 
-        String user = Paper.book().read(Common.USER_KEY);
-        String pwd = Paper.book().read(Common.PWD_KEY);
         if (user !=null) {
-            if (!user.isEmpty() && !pwd.isEmpty()) {
-                ckbRemember.setChecked(true);
-                validateUser(user, pwd);
-                /*Intent intent = new Intent(Login.this, Home.class);
-                startActivity(intent);
-                finish();*/
+            if (!user.isEmpty()) {
+                assert pwd != null;
+                if (!pwd.isEmpty()) {
+                    ckbRemember.setChecked(true);
+                    validateUser(user, pwd);
+
+                }
             }
         }
-        //if (AppUtils.isNetworkAvailable(this)) {
 
-        /*}else {
-            Toast.makeText(this, R.string.network_error, Toast.LENGTH_SHORT).show();
-        }*/
 
         btnCheckServerIp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,8 +117,11 @@ public class Login extends Activity {
                 } else {
                     validateUser(edtUserName.getText().toString(), edtPassword.getText().toString());
                     if (ckbRemember.isChecked()) {
-                        Paper.book().write(Common.USER_KEY, edtUserName.getText().toString());
-                        Paper.book().write(Common.PWD_KEY, edtPassword.getText().toString());
+                        //need to change local db
+                        mSharedPreferences.edit().putString(Common.USER_KEY, edtUserName.getText().toString()).apply();
+                        mSharedPreferences.edit().putString(Common.PWD_KEY, edtPassword.getText().toString()).apply();
+                        /*Paper.book().write(Common.USER_KEY, edtUserName.getText().toString());
+                        Paper.book().write(Common.PWD_KEY, edtPassword.getText().toString());*/
                     }
                 }
             }
@@ -226,6 +231,8 @@ public class Login extends Activity {
                 } else {
                     String ip_port = ip + ":" + port;
                     //Paper.book().write(Common.URL_CONTEXT,ip_port);
+                    mSharedPreferences.edit().putString(Common.URL_CONTEXT,ip_port).apply();
+
                     if(common.saveFile(ip_port)) {
                         //ServerUrls.ContextUrl = "http://"+Common.readFile()+"/Inventory/";
                         Toast.makeText(getApplicationContext(), ip_port + "  has been set", Toast.LENGTH_LONG).show();
@@ -254,7 +261,7 @@ public class Login extends Activity {
                             String result = jsonObject.getString("response");
                             if (result.equalsIgnoreCase("success")) {
                                 //Toast.makeText(Login.this, "Success", Toast.LENGTH_SHORT).show();
-                                Common.USER_ID = userName;
+                                Common.userName = userName;
                                 Intent intent = new Intent(Login.this, Home.class);
                                 startActivity(intent);
                                 finish();

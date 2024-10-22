@@ -44,68 +44,68 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
     private Button btnSetFre;
     private Button btnGetFre;
     private Spinner spMode;
-    @ViewInject(R.id.ll_freHop)
+
     private LinearLayout ll_freHop;
 
-    @ViewInject(R.id.btnSetPower)
+
     private Button btnSetPower;
-    @ViewInject(R.id.btnGetPower)
+
     private Button btnGetPower;
-    @ViewInject(R.id.spPower)
+
     private Spinner spPower;
-    @ViewInject(R.id.et_worktime)
+
     private EditText et_worktime;
-    @ViewInject(R.id.et_waittime)
+
     private EditText et_waittime;
-    @ViewInject(R.id.btnWorkWait)
+
     private Button btnWorkWait;
-    @ViewInject(R.id.spFreHop)
+
     private Spinner spFreHop; //频点列表
-    @ViewInject(R.id.btnSetFreHop)
+
     private Button btnSetFreHop; //设置频点设置
-    @ViewInject(R.id.tv_normal_set)
+
     private TextView tv_normal_set; //普通设置(点击5次设置频点设置)
-    @ViewInject(R.id.btnGetWait)
+
     private Button btnGetWait; //获取空占比
-    @ViewInject(R.id.btnSetAgreement)
+
     private Button btnSetAgreement; //设置协议
-    @ViewInject(R.id.SpinnerAgreement)
+
     private Spinner SpinnerAgreement; //协议列表
-    @ViewInject(R.id.btnSetLinkParams)
+
     private Button btnSetLinkParams; //设置链路参数
-    @ViewInject(R.id.btnGetLinkParams)
+
     private Button btnGetLinkParams; //获取链路参数
-    @ViewInject(R.id.splinkParams)
+
     private Spinner splinkParams; //链路参数列表
-    @ViewInject(R.id.btnSetQTParams)
+
     private Button btnSetQTParams; //设置QT参数
-    @ViewInject(R.id.btnGetQTParams)
+
     private Button btnGetQTParams; //获取QT参数
-    @ViewInject(R.id.cbQT)
+
     private CheckBox cbQt; //打开QT
-    @ViewInject(R.id.cbTagFocus)
+
     private CheckBox cbTagFocus; //打开tagFocus
-    @ViewInject(R.id.cbFastID)
+
     private CheckBox cbFastID; //打开FastID
-    @ViewInject(R.id.cbEPC_TID)
+
     private CheckBox cbEPC_TID; //打开EPC+TID
 
-    @ViewInject(R.id.rb_America)
+
     private RadioButton rb_America; //美国频点
-    @ViewInject(R.id.rb_Others)
+
     private RadioButton rb_Others; //其他频点
     private ArrayAdapter adapter; //频点列表适配器
 
-    @ViewInject(R.id.spsession)//session
+   //session
     private  Spinner SpSession;
 
-    @ViewInject(R.id.spinv)//
+
     private  Spinner SpInv;
 
-    @ViewInject(R.id.btnGetSession)
+
     private  Button btnGetSession;
 
-    @ViewInject(R.id.btnSetSession)
+
     private  Button btnSetSession;
 
     private DisplayMetrics metrics;
@@ -331,8 +331,8 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             switch (buttonView.getId()) {
-                case R.id.cbTagFocus:
-                    /*if (mContext.mReader.setTagFocus(isChecked)) {
+                /*case R.id.cbTagFocus:
+                    *//*if (mContext.mReader.setTagFocus(isChecked)) {
                         if (isChecked) {
                             cbTagFocus.setText(R.string.tagFocus_off);
                         } else {
@@ -344,10 +344,10 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                         UIHelper.ToastMessage(mContext,
                                 R.string.uhf_msg_set_fail);
 //                        mContext.playSound(2);
-                    }*/
+                    }*//*
                     break;
                 case R.id.cbFastID:
-                    /*if (mContext.mReader.setFastID(isChecked)) {
+                    *//*if (mContext.mReader.setFastID(isChecked)) {
                         if (isChecked) {
                             cbFastID.setText(R.string.fastID_off);
                         } else {
@@ -359,10 +359,10 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                         UIHelper.ToastMessage(mContext,
                                 R.string.uhf_msg_set_fail);
 //                        mContext.playSound(2);
-                    }*/
+                    }*//*
                     break;
                 case R.id.cbEPC_TID:
-                    /*if (mContext.mReader.setEPCTIDMode(isChecked)) {
+                    *//*if (mContext.mReader.setEPCTIDMode(isChecked)) {
                         if (isChecked) {
                             cbEPC_TID.setText(R.string.EPC_TID_off);
                         } else {
@@ -374,13 +374,13 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                         UIHelper.ToastMessage(mContext,
                                 R.string.uhf_msg_set_fail);
 //                        mContext.playSound(2);
-                    }*/
-                    break;
+                    }*//*
+                    break;*/
             }
         }
     }
 
-    @OnClick(R.id.btnGetPower)
+
     public void OnClick_GetPower(View view) {
         /*int iPower = mContext.mReader.getPower();
 
@@ -400,7 +400,7 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
 
     }
 
-    @OnClick(R.id.btnSetPower)
+
     public void OnClick_SetPower(View view) {
         int iPower = spPower.getSelectedItemPosition() + 5;
 
@@ -439,7 +439,8 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
-        switch (v.getId()) {
+
+        /*switch (v.getId()) {
             case R.id.btnSetFreHop: //设置频点
 //			showFrequencyDialog();
                 View view = spFreHop.getSelectedView();
@@ -452,12 +453,12 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                 getPwm();
                 break;
             case R.id.btnSetAgreement: //设置协议
-                /*if (mContext.mReader.setProtocol(SpinnerAgreement.getSelectedItemPosition())) {
+                *//*if (mContext.mReader.setProtocol(SpinnerAgreement.getSelectedItemPosition())) {
                     UIHelper.ToastMessage(mContext, R.string.setAgreement_succ);
                 } else {
                     UIHelper.ToastMessage(mContext, R.string.setAgreement_fail);
 //                    mContext.playSound(2);
-                }*/
+                }*//*
                 break;
             case R.id.btnSetQTParams: //设置QT参数
                 if (!cbQt.isChecked()) {
@@ -465,16 +466,16 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
 //                    mContext.playSound(2);
                     return;
                 }
-                /*if (mContext.mReader.setQTPara(cbQt.isChecked())) {
+                *//*if (mContext.mReader.setQTPara(cbQt.isChecked())) {
                     UIHelper.ToastMessage(mContext, R.string.setQTParams_succ);
 
                 } else {
                     UIHelper.ToastMessage(mContext, R.string.setQTParams_fail);
 //                    mContext.playSound(2);
-                }*/
+                }*//*
                 break;
             case R.id.btnGetQTParams: //获取QT参数
-                /*int[] QTParams = mContext.mReader.getQTPara();
+                *//*int[] QTParams = mContext.mReader.getQTPara();
                 if (QTParams[0] == 1) {
                     cbQt.setChecked(QTParams[1] == 1);
                     UIHelper.ToastMessage(mContext,
@@ -482,10 +483,10 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                 } else {
                     UIHelper.ToastMessage(mContext,
                             R.string.getQTParams_fail);
-                }*/
+                }*//*
                 break;
             case R.id.btnSetLinkParams: //设置链路参数
-                /*if (mContext.mReader.setRFLink(splinkParams.getSelectedItemPosition())) {
+                *//*if (mContext.mReader.setRFLink(splinkParams.getSelectedItemPosition())) {
 
                     UIHelper.ToastMessage(mContext,
                             R.string.uhf_msg_set_succ);
@@ -494,7 +495,7 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                     UIHelper.ToastMessage(mContext,
                             R.string.uhf_msg_set_fail);
 //                    mContext.playSound(2);
-                }*/
+                }*//*
                 break;
             case R.id.btnGetLinkParams: //获取链路参数
                 getLinkParams();
@@ -508,7 +509,7 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                 if(seesionid<0 || inventoried<0){
                     return;
                 }
-                /*char[] p=mContext.mReader.GetGen2();
+                *//*char[] p=mContext.mReader.GetGen2();
                 if(p!=null && p.length>=14) {
                     int target = p[0];
                     int action = p[1];
@@ -552,10 +553,10 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                 }else{
                     UIHelper.ToastMessage(mContext,
                             R.string.uhf_msg_set_fail);
-                }*/
+                }*//*
                 break;
             case R.id.btnGetSession:
-                /*char[] pp=mContext.mReader.GetGen2();
+                *//*char[] pp=mContext.mReader.GetGen2();
                 if(pp!=null && pp.length>=14) {
                     int target = pp[0];
                     int action = pp[1];
@@ -591,10 +592,10 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
                     SpInv.setSelection(g);
                     UIHelper.ToastMessage(mContext,
                             R.string.uhf_msg_set_succ);
-                }*/
+                }*//*
             default:
                 break;
-        }
+        }*/
     }
 
     /**
@@ -688,7 +689,7 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
         return metrics.heightPixels;
     }
 
-    @OnClick(R.id.rb_America)
+
     public void onClick_rbAmerica(View view) {
 
         adapter = ArrayAdapter.createFromResource(mContext, R.array.arrayFreHop_us, android.R.layout.simple_spinner_item);
@@ -696,7 +697,7 @@ public class UHFSetFragment extends KeyDwonFragment implements OnClickListener {
         spFreHop.setAdapter(adapter);
     }
 
-    @OnClick(R.id.rb_Others)
+
     public void onClick_rbOthers(View view) {
 
         adapter = ArrayAdapter.createFromResource(mContext, R.array.arrayFreHop, android.R.layout.simple_spinner_item);

@@ -1,4 +1,0 @@
-#Fri Jan 27 23:24:50 IST 2023
-base.0=D\:\\UNLAndroid\\demo-uhf_as\\build\\intermediates\\transforms\\dexMerger\\debug\\37
-path.0=classes.dex
-renamed.0=classes.dex

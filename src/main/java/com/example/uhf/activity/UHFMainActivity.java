@@ -28,10 +28,6 @@ import android.media.SoundPool;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -45,9 +41,8 @@ public class UHFMainActivity extends BaseTabFragmentActivity {
 	String SCAN_BUTTON_VALUE = "";
 	private SharedPreferences mSharedPreferences;
 	private ScanUtil instance;
-	public static UHFRManager mUhfrManager;
+	//public static UHFRManager mUhfrManager;
 
-	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
@@ -56,7 +51,7 @@ public class UHFMainActivity extends BaseTabFragmentActivity {
 		mSharedPreferences = getSharedPreferences("UHF", MODE_PRIVATE);
 
 		ActionBar actionBar = (ActionBar) getActionBar();
-		actionBar.setBackgroundDrawable(this.getDrawable(R.drawable.banner));
+		actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.banner));
 		actionBar.setTitle("");
 		actionBar.setIcon(android.R.color.transparent);
 
@@ -78,32 +73,36 @@ public class UHFMainActivity extends BaseTabFragmentActivity {
 			instance = ScanUtil.getInstance(this);
 			instance.disableScanKey("134");
 		}
-		mUhfrManager = UHFRManager.getInstance();// Init Uhf module
+		/*mUhfrManager = UHFRManager.getInstance();// Init Uhf module
 		if(mUhfrManager!=null){
 			Reader.READER_ERR err = mUhfrManager.setPower(mSharedPreferences.getInt("readPower",33), mSharedPreferences.getInt("writePower",33));//set uhf module power
 
 			if(err== Reader.READER_ERR.MT_OK_ERR){
 				mUhfrManager.setRegion(Reader.Region_Conf.valueOf(mSharedPreferences.getInt("freRegion", 1)));
-				Toast.makeText(getApplicationContext(),"FreRegion:"+Reader.Region_Conf.valueOf(mSharedPreferences.getInt("freRegion",1))+
+				*//*Toast.makeText(getApplicationContext(),"FreRegion:"+Reader.Region_Conf.valueOf(mSharedPreferences.getInt("freRegion",1))+
 						"\n"+"Read Power:"+mSharedPreferences.getInt("readPower",33)+
-						"\n"+"Write Power:"+mSharedPreferences.getInt("writePower",33),Toast.LENGTH_LONG).show();
-//                showToast(getString(R.string.inituhfsuccess));
+						"\n"+"Write Power:"+mSharedPreferences.getInt("writePower",33),Toast.LENGTH_LONG).show();*//*
+               showToast("Reader Connected!!!");
+
 			}else {
 
 				Reader.READER_ERR err1 = mUhfrManager.setPower(30, 30);//set uhf module power
 				if(err1== Reader.READER_ERR.MT_OK_ERR) {
 					mUhfrManager.setRegion(Reader.Region_Conf.valueOf(mSharedPreferences.getInt("freRegion", 1)));
-					Toast.makeText(getApplicationContext(), "FreRegion:" + Reader.Region_Conf.valueOf(mSharedPreferences.getInt("freRegion", 1)) +
+					*//*Toast.makeText(getApplicationContext(), "FreRegion:" + Reader.Region_Conf.valueOf(mSharedPreferences.getInt("freRegion", 1)) +
 							"\n" + "Read Power:" + 30 +
-							"\n" + "Write Power:" + 30, Toast.LENGTH_LONG).show();
+							"\n" + "Write Power:" + 30, Toast.LENGTH_LONG).show();*//*
+					showToast("Reader Connected!!!");
 				}else {
-					showToast(getString(R.string.inituhffail));
+					//showToast(getString(R.string.inituhffail));
+					showToast("READER FAILED");
 				}
 			}
 		}else {
-			showToast(getString(R.string.inituhffail));
+			//showToast(getString(R.string.inituhffail));
+			showToast("READER FAILED");
 		}
-		Log.e(TAG, "[onStart] end");
+		Log.e(TAG, "[onStart] end");*/
 	}
 
 	@Override
@@ -134,10 +133,19 @@ public class UHFMainActivity extends BaseTabFragmentActivity {
     @Override
 	protected void onDestroy() {
 
-		if (mUhfrManager != null) {
-			mUhfrManager.asyncStartReading();
-		}
+		/*if (mUhfrManager != null) {
+			mUhfrManager.asyncStopReading();
+			//mUhfrManager.stopTagInventory();
+		}*/
 		super.onDestroy();
+	}
+
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		/*if (mUhfrManager != null) {
+			mUhfrManager.asyncStopReading();
+		}*/
 	}
 
 	public void sendData(String BUTTON_VALUE)
@@ -186,7 +194,7 @@ public class UHFMainActivity extends BaseTabFragmentActivity {
 			return false;
 		}
 
-		// ���ȱ�����ż��
+
 		if (str.length() % 2 == 0) {
 			return StringUtility.isHexNumberRex(str);
 		}

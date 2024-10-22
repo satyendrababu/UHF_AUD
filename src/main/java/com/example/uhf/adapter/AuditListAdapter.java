@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.uhf.R;
@@ -34,6 +35,8 @@ public class AuditListAdapter extends ArrayAdapter<Tagging> {
         TextView tvItemId = (TextView) view.findViewById(R.id.tvItemId);
         TextView textTitle = (TextView)view.findViewById(R.id.textTitle);
         TextView textLocation = (TextView)view.findViewById(R.id.textLocation);
+        //ImageView tagLoc = (ImageView) view.findViewById(R.id.tagLoc);
+        //tagLoc.setVisibility(View.GONE);
         Tagging tagging = taggingList.get(position);
         tvItemId.setText(tagging.getItem_id());
         textTitle.setText(tagging.getTitle());

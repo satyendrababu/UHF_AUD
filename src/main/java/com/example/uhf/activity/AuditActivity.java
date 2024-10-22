@@ -11,7 +11,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
+//import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -69,7 +69,7 @@ public class AuditActivity extends Activity {
     private Button BtClear;
     private ListView LvTags;
     private AuditListAdapter auditListAdapter;
-    private LinkedList<Tagging> auditableEqptList;
+    private LinkedList<Tagging> auditableEqptList = new LinkedList<>();
     private LinkedList<Tagging> missingEqptList;
     private LinkedList<Tagging> mislocatedEqptList;
     ServerUrls serverUrls;
@@ -78,14 +78,14 @@ public class AuditActivity extends Activity {
     private AlertDialog dialog;
 
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audit);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ActionBar actionBar = (ActionBar) getActionBar();
-        actionBar.setBackgroundDrawable(this.getDrawable(R.drawable.banner));
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.banner));
         actionBar.setTitle("");
         actionBar.setIcon(android.R.color.transparent);
         serverUrls = new ServerUrls();

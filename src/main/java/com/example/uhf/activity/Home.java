@@ -3,16 +3,16 @@ package com.example.uhf.activity;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -34,6 +34,7 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.example.uhf.R;
+import com.example.uhf.Utilities.Common;
 import com.example.uhf.Utilities.Tagging;
 import com.example.uhf.adapter.AuditListAdapter;
 import com.example.uhf.adapter.ListClickAdapter;
@@ -42,7 +43,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import io.paperdb.Paper;
 
 import static com.lidroid.xutils.view.ResLoader.getColor;
 
@@ -65,20 +65,24 @@ public class Home extends Activity implements BaseSliderView.OnSliderClickListen
     List<Tagging> taggingList;
     ListView listDialog;
     private AlertDialog dialog;
+    private ProgressDialog pDialog;
+    private SharedPreferences mSharedPreferences;
 
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Paper.init(this);
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        mSharedPreferences = getSharedPreferences("UHF", MODE_PRIVATE);
         ActionBar actionBar = (ActionBar) getActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
+        pDialog = new ProgressDialog(Home.this);
         //actionBar.setTitle("    ");
       //  actionBar.setLogo(R.drawable.banner);
-        actionBar.setBackgroundDrawable(this.getDrawable(R.drawable.banner));
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.banner));
         actionBar.setTitle("");
         actionBar.setIcon(android.R.color.transparent);
 
@@ -90,8 +94,13 @@ public class Home extends Activity implements BaseSliderView.OnSliderClickListen
         layout_inventory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                pDialog.setMessage("Please wait...");
+                pDialog.setCancelable(false);
+                pDialog.show();
                 Intent intent_inventory = new Intent(Home.this, UHFMainActivity.class);
                 startActivity(intent_inventory);
+
             }
         });
         layout_audit.setOnClickListener(new View.OnClickListener() {
@@ -174,6 +183,12 @@ public class Home extends Activity implements BaseSliderView.OnSliderClickListen
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        pDialog.dismiss();
+    }
+
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             // your code
@@ -193,13 +208,13 @@ public class Home extends Activity implements BaseSliderView.OnSliderClickListen
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_logout:
+            /*case R.id.action_logout:
                 //showCloseAlertDialog();a
                 showLogoutDialog();
                 break;
 
             default:
-                break;
+                break;*/
         }
 
         return true;
@@ -285,7 +300,7 @@ public class Home extends Activity implements BaseSliderView.OnSliderClickListen
                 Intent intent = new Intent(Home.this, Login.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-                Paper.book().destroy();
+                //Paper.book().destroy();
                 finish();
 
 
@@ -341,7 +356,8 @@ public class Home extends Activity implements BaseSliderView.OnSliderClickListen
             @Override
             public void onClick(View v) {
                 //deleteOrderFromCSCart(orderId, dialog);
-                Paper.book().destroy();
+                //Paper.book().destroy();
+                mSharedPreferences.edit().remove(Common.USER_KEY).apply();
                 Intent intent = new Intent(Home.this, Login.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

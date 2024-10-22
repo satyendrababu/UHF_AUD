@@ -21,7 +21,7 @@ import android.widget.RadioButton;
 import com.example.uhf.R;
 import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.UIHelper;
-import com.rscja.deviceapi.RFIDWithUHF;
+import com.rscja.deviceapi.RFIDBase;
 
 
 public class UHFLockFragment extends KeyDwonFragment implements  OnClickListener{
@@ -200,7 +200,7 @@ public class UHFLockFragment extends KeyDwonFragment implements  OnClickListener
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case  R.id.rbEPC_filter_lock:
+            /*case  R.id.rbEPC_filter_lock:
                 etPtr_filter_lock.setText("32");
                 break;
             case  R.id.rbTID_filter_lock:
@@ -208,7 +208,7 @@ public class UHFLockFragment extends KeyDwonFragment implements  OnClickListener
                 break;
             case  R.id.rbUser_filter_lock:
                 etPtr_filter_lock.setText("0");
-                break;
+                break;*/
         }
     }
 
